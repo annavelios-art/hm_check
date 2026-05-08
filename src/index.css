@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* 
+ * Globale Styles für die Heilmittel-Check PWA
+ * Mobile-first Design mit professionellen Blau-/Grün-Tönen
+ */
+
+:root {
+  /* Primärfarben - Professionelles Blau */
+  --color-primary: #1e40af;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1e3a8a;
+  
+  /* Erfolgsfarben - Grün */
+  --color-success: #059669;
+  --color-success-light: #10b981;
+  --color-success-bg: #ecfdf5;
+  --color-success-border: #a7f3d0;
+  
+  /* Fehlerfarben - Rot */
+  --color-error: #dc2626;
+  --color-error-light: #ef4444;
+  --color-error-bg: #fef2f2;
+  --color-error-border: #fecaca;
+  
+  /* Hinweisfarben - Neutral Blau */
+  --color-info: #0369a1;
+  --color-info-light: #0ea5e9;
+  --color-info-bg: #f0f9ff;
+  --color-info-border: #bae6fd;
+  
+  /* Neutralfarben */
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility-Klassen für konsistentes Spacing */
+.container {
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Card-Komponente Basis */
+.card {
+  background-color: var(--color-surface);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+}
+
+/* Form-Elemente Basis */
+input,
+select,
+button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 2px;
+}
+
+/* Scrollbar-Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* PWA-Optimierungen */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
