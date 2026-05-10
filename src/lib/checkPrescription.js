@@ -13,10 +13,6 @@
 import { addDays, format } from 'date-fns'
 import { de } from 'date-fns/locale'
 
-/**
- * Mapping der Therapiefrequenzen auf minimale Behandlungen pro Woche
- * Wird verwendet für die 12-Wochen-Regel.
- */
 const FREQUENCY_MAP = {
   '1x wöchentlich': 1,
   '1-2x wöchentlich': 1,
@@ -26,30 +22,12 @@ const FREQUENCY_MAP = {
   '4x wöchentlich': 4,
 }
 
-/**
- * Hauptfunktion zur Prüfung einer Heilmittelverordnung.
- *
- * @param {Object} data - Formulardaten der Verordnung
- * @param {string} data.issueDate - Ausstellungsdatum
- * @param {string} data.diagnosisGroup - Diagnosegruppe, z. B. EX, WS, ZN
- * @param {string[]} data.symptoms - Leitsymptomatiken
- * @param {string} data.remedy - Heilmittel
- * @param {number|string} data.units - Anzahl Behandlungseinheiten
- * @param {string} data.icd10 - ICD-10 Code
- * @param {string} data.frequency - Therapiefrequenz
- * @param {Array} csvData - Geladene CSV-Daten
- *
- * @returns {Object} Prüfergebnis
- */
 export function checkPrescription(data, csvData = []) {
   const errors = []
   const infos = []
   let latestStartDate = null
   let csvMatch = null
 
-  // ============================================
-  // REGEL 1: Ausstellungsdatum muss vorhanden sein
-  // ============================================
   if (!data.issueDate) {
     errors.push('Bitte Ausstellungsdatum eingeben.')
   } else {
@@ -63,34 +41,21 @@ export function checkPrescription(data, csvData = []) {
     }
   }
 
-  // ============================================
-  // REGEL 2: Diagnosegruppe muss ausgewählt sein
-  // ============================================
   if (!data.diagnosisGroup) {
     errors.push('Bitte Diagnosegruppe auswählen.')
   }
 
-  // ============================================
-  // REGEL 3: Heilmittel muss ausgewählt sein
-  // ============================================
   if (!data.remedy) {
     errors.push('Bitte Heilmittel auswählen.')
   }
 
-  // ============================================
-  // REGEL 4: Behandlungseinheiten müssen > 0 sein
-  // ============================================
   const units = parseInt(data.units, 10)
 
   if (!data.units || Number.isNaN(units) || units <= 0) {
     errors.push('Bitte Behandlungseinheiten eingeben.')
   }
 
-  // ============================================
-  // REGEL 5: Zusatzprüfung bei mehr als 6 Einheiten
-  // ============================================
   if (units > 6) {
-    // 5a: Therapiefrequenz ist Pflicht
     if (!data.frequency) {
       errors.push('Bei mehr als 6 Behandlungseinheiten muss eine Therapiefrequenz angegeben werden.')
     } else {
@@ -104,7 +69,6 @@ export function checkPrescription(data, csvData = []) {
       }
     }
 
-    // 5b: ICD-10 ist Pflicht
     const icd10Normalized = normalizeIcd10(data.icd10)
 
     if (!icd10Normalized) {
@@ -119,7 +83,6 @@ export function checkPrescription(data, csvData = []) {
       } else {
         const physioGroups = parsePhysioGroups(csvMatch.Physio)
 
-        // Diagnosegruppe gegen Physio-Spalte prüfen
         if (data.diagnosisGroup && physioGroups.length > 0) {
           const inputGroup = data.diagnosisGroup.trim().toUpperCase()
           const groupMatches = physioGroups.includes(inputGroup)
@@ -131,13 +94,16 @@ export function checkPrescription(data, csvData = []) {
           }
         }
 
-        // Neutrale Hinweise aus CSV
+        infos.push(
+          'ICD-10 wurde in der Diagnoseliste für langfristigen Heilmittelbedarf / besonderen Verordnungsbedarf gefunden.'
+        )
+
         if (csvMatch.Diagnose?.trim()) {
-          infos.push(`Diagnose: ${csvMatch.Diagnose}`)
+          infos.push(`Diagnose: ${csvMatch.Diagnose.trim()}`)
         }
 
         if (csvMatch.Hinweis?.trim()) {
-          infos.push(`Hinweis aus Diagnoseliste: ${csvMatch.Hinweis}`)
+          infos.push(`Hinweis aus Diagnoseliste: ${csvMatch.Hinweis.trim()}`)
         }
 
         if (physioGroups.length > 0) {
@@ -161,26 +127,12 @@ export function checkPrescription(data, csvData = []) {
   }
 }
 
-/**
- * Normalisiert einen ICD-10 Code.
- */
 function normalizeIcd10(icd10) {
   if (!icd10) return ''
   return icd10.trim().toUpperCase().replace(/\s+/g, '')
 }
 
-/**
- * Sucht einen ICD-10 Code in den CSV-Daten.
- *
- * Suchlogik:
- * 1. exakter Treffer in ICD1 oder ICD2
- * 2. Bereichstreffer, z. B. CSV enthält M17 und Eingabe ist M17.1
- *
- * Wichtig:
- * Es wird niemals einfach ein vorheriger CSV-Eintrag übernommen.
- */
 function findIcdInCsv(icd10, csvData) {
-  // 1. Exakter Treffer
   for (const row of csvData) {
     const icd1 = normalizeIcd10(row.ICD1)
     const icd2 = normalizeIcd10(row.ICD2)
@@ -190,17 +142,13 @@ function findIcdInCsv(icd10, csvData) {
     }
   }
 
-  // 2. Bereichstreffer
   for (const row of csvData) {
     const icd1 = normalizeIcd10(row.ICD1)
     const icd2 = normalizeIcd10(row.ICD2)
 
     if (
       row.Physio?.trim() &&
-      (
-        (icd1 && icd10.startsWith(icd1)) ||
-        (icd2 && icd10.startsWith(icd2))
-      )
+      ((icd1 && icd10.startsWith(icd1)) || (icd2 && icd10.startsWith(icd2)))
     ) {
       return row
     }
@@ -209,16 +157,6 @@ function findIcdInCsv(icd10, csvData) {
   return null
 }
 
-/**
- * Parst die Physio-Spalte und extrahiert einzelne Diagnosegruppen.
- *
- * Erlaubte Formate:
- * EX
- * EX/WS
- * EX / WS
- * EX, WS
- * EX;WS
- */
 function parsePhysioGroups(physioString) {
   if (!physioString) return []
 
@@ -228,9 +166,6 @@ function parsePhysioGroups(physioString) {
     .filter(group => group.length > 0)
 }
 
-/**
- * Lädt und parst die CSV-Datei mit der Diagnoseliste.
- */
 export async function loadCsvData(url = '/data/blb_pwa.csv') {
   try {
     const response = await fetch(url)
@@ -248,9 +183,6 @@ export async function loadCsvData(url = '/data/blb_pwa.csv') {
   }
 }
 
-/**
- * Parst CSV-Text in ein Array von Objekten.
- */
 function parseCsv(csvText) {
   const lines = csvText.split('\n').filter(line => line.trim())
 
@@ -273,10 +205,6 @@ function parseCsv(csvText) {
   return data
 }
 
-/**
- * Parst eine einzelne CSV-Zeile.
- * Unterstützt Semikolon als Trennzeichen und Anführungszeichen.
- */
 function parseCsvLine(line) {
   const values = []
   let current = ''
