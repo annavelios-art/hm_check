@@ -1,497 +1,419 @@
-"ICD1";"ICD2";"Diagnose";"Physio";"Ergo";"Logo";"Hinweis"
-"KRANKHEITEN UND VERLETZUNGEN DES NERVENSYSTEMS";"";"";"";"";"";""
-"B94.1";"";"Folgezustände der Virusenzephalitis";"ZN/SO3";"EN1";"SC/ST1/SP1/ SP3/SP4/SP5/ RE1/RE2/SF";"längstens 1 Jahr nach Akutereignis"
-"";"";"Bösartige Neubildungen der Meningen:";"ZN/";"EN1/ EN2";"SC/ST1/SP1/";"längstens 1 Jahr nach Akutereignis"
-"C70.0";"";"Hirnhäute";"SO1/SO3";"";"SP2/SP3/SP5/";"längstens 1 Jahr nach Akutereignis"
-"C70.1";"";"Rückenmarkhäute";"";"";"SP6/RE1/RE2/";""
-"C70.9";"";"Meningen, nicht näher bezeichnet";"";"";"SF";""
-"";"";"Bösartige Neubildung des Gehirns:";"";"";"";""
-"C71.0";"";"Zerebrum, ausgenommen Hirnlappen und Ventrikel";"";"";"";""
-"C71.1";"";"Frontallappen";"";"";"";""
-"C71.2";"";"Temporallappen";"";"";"";""
-"C71.3";"";"Parietallappen";"";"";"";""
-"C71.4";"";"Okzipitallappen";"";"";"";""
-"C71.5";"";"Hirnventrikel";"";"";"";""
-"C71.6";"";"Zerebellum";"";"";"";""
-"C71.7";"";"Hirnstamm";"";"";"";""
-"C71.8";"";"Gehirn, mehrere Teilbereiche überlappend";"";"";"";""
-"C71.9";"";"Gehirn, nicht näher bezeichnet";"";"";"";""
-"";"";"Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems:";"";"";"";""
-"C72.0";"";"Rückenmark";"";"";"";""
-"C72.1";"";"Cauda equina";"";"";"";""
-"C72.2";"";"Nn. olfactorii [I. Hirnnerv]";"";"";"";""
-"C72.3";"";"N. opticus [II. Hirnnerv]";"";"";"";""
-"C72.4";"";"N. vestibulocochlearis [VIII. Hirnnerv]";"";"";"";""
-"C72.5";"";"Sonstige und nicht näher bezeichnete Hirnnerven";"";"";"";""
-"C72.8";"";"Gehirn und andere Teile des Zentral- nervensystems, mehrere Teilbereiche überlappend";"";"";"";""
-"C72.9";"";"Zentralnervensystem, nicht näher bezeichnet";"";"";"";""
-"G10";"";"Chorea Huntington";"ZN";"EN1";"SC/SP5/SP6";""
-"";"";"Hereditäre Ataxie:";"ZN";"EN1";"SC";""
-"G11.0";"";"Angeborene nichtprogressive Ataxie";"";"";"";""
-"G11.1";"";"Früh beginnende zerebellare Ataxie";"";"";"";""
-"G11.2";"";"Spät beginnende zerebellare Ataxie";"";"";"";""
-"G11.3";"";"Zerebellare Ataxie mit defektem DNA-Re- paratursystem";"";"";"";""
-"G11.4";"";"Hereditäre spastische Paraplegie";"";"";"";""
-"G11.8";"";"Sonstige hereditäre Ataxien";"";"";"";""
-"G11.9";"";"Hereditäre Ataxie, nicht näher bezeichnet";"";"";"";""
-"";"";"Spinale Muskelatrophie und verwandte Syndrome:";"ZN/AT";"EN2/SB3";"SC/SP6";""
-"G12.0";"";"Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Hoffmann]";"";"";"";""
-"G12.1";"";"Sonstige vererbte spinale Muskelatrophie";"";"";"";""
-"G12.2";"";"Motoneuron-Krankheit";"";"";"";""
-"G12.8";"";"Sonstige spinale Muskelatrophien und verwandte Syndrome";"";"";"";""
-"G12.9";"";"Spinale Muskelatrophie, nicht näher bezeichnet";"";"";"";""
-"G14";"";"Postpoliosyndrom";"ZN/PN/ AT";"EN1/EN2/ EN3";"SC/SP6";""
-"";"";"Primäres Parkinson-Syndrom:";"ZN";"EN1";"SC/SP6";""
-"G20.1-";"";"Primäres Parkinson-Syndrom mit mäßiger bis schwerer Beeinträchtigung (Stadien 3 oder 4 nach Hoehn und Yahr)";"";"";"";""
-"G20.2-";"";"Primäres Parkinson-Syndrom mit schwers- ter Beeinträchtigung (Stadium 5 nach Hoehn und Yahr)";"ZN";"EN1";"SC/SP6/ ST1";""
-"";"";"Sekundäres Parkinson-Syndrom:";"ZN";"EN1";"SC/SP6";""
-"G21.3";"";"Postenzephalitisches Parkinson-Syndrom";"";"";"";""
-"G21.4";"";"Vaskuläres Parkinson-Syndrom";"";"";"";""
-"G21.8";"";"Sonstiges sekundäres Parkinson-Syndrom";"";"";"";""
-"G24.3";"";"Torticollis spasticus";"ZN";"";"";"nur bei gleichzeitiger leitliniengerechter medikamentöser Therapie"
-"";"";"Multiple Sklerose [Encephalomyelitis disseminata]:";"ZN";"EN1/EN2";"SC/ST1/ SP5/SP6";""
-"G35.0";"";"Erstmanifestation einer multiplen Skle- rose";"";"";"";""
-"G35.1-";"";"Multiple Sklerose mit vorherrschend schubförmigem Verlauf";"";"";"";""
-"G35.2-";"";"Multiple Sklerose mit primär-chronischem Verlauf";"";"";"";""
-"G35.3-";"";"Multiple Sklerose mit sekundär-chroni- schem Verlauf";"";"";"";""
-"  G35.9                           ";"";"Multiple Sklerose, nicht näher bezeichnet  ";"";"";"";""
-"Sonstige akute disseminierte Demyelinisation:";"";"";"";"";"";""
-"G36.0";"";"Neuromyelitis optica [Devic-Krankheit]";"";"";"";""
-"G36.1";"";"Akute und subakute hämorrhagische Leukoenzephalitis [Hurst]";"";"";"";""
-"G36.8";"";"Sonstige näher bezeichnete akute dis- seminierte Demyelinisation";"";"";"";""
-"G36.9";"";"Akute disseminierte Demyelinisation, nicht näher bezeichnet";"";"";"";""
-"";"";"Sonstige demyelinisierende Krankheiten des Zentralnervensystems:";"ZN";"EN1/EN2";"SC/ST1/ SP5/SP6";""
-"G37.0";"";"Diffuse Hirnsklerose";"";"";"";""
-"G37.1";"";"Zentrale Demyelinisation des Corpus callosum";"";"";"";""
-"G37.2";"";"Zentrale pontine Myelinolyse";"";"";"";""
-"G37.3";"";"Myelitis transversa acuta bei demyelini- sierender Krankheit des Zentralnerven- systems";"";"";"";""
-"G37.4";"";"Subakute nekrotisierende Myelitis [Foix- Alajouanine-Syndrom]";"";"";"";""
-"G37.5";"";"Konzentrische Sklerose [Baló-Krankheit]";"";"";"";""
-"G37.8";"";"Sonstige näher bezeichnete demyelini- sierende Krankheiten des Zentralnerven- systems";"";"";"";""
-"G37.9";"";"Demyelinisierende Krankheit des Zentral- nervensystems, nicht näher bezeichnet";"";"";"";""
-"";"";"Polyneuropathien und sonstige Krank- heiten des peripheren Nervensystems:";"";"";"";""
-"G60.0";"";"Hereditäre sensomotorische Neuropathie";"WS/EX/PN";"SB2/EN3";"SP3";""
-"G60.8";"";"Sonstige hereditäre und idiopathische Neuropathien";"EX/CS/PN/ SO4";"SB1/SB2/ EN3";"";""
-"G61.0";"";"Guillain-Barré-Syndrom";"PN";"EN3";"";""
-"G61.8";"";"Sonstige Polyneuritiden";"PN";"EN3";"";"nur chronisch inflammatorische demyelinisierende Polyradikuloneuro- pathie (CIDP)"
-"G70.0";"";"Myasthenia gravis";"ZN";"EN1/SB3";"SC/SP6";""
-"G70.2";"";"Angeborene oder entwicklungsbedingte Myasthenie";"PN/AT";"EN3/SB3";"SC/SP6";""
-"G71.0";"";"Muskeldystrophie";"ZN/AT";"EN2/SB3";"SC/SP6";""
-"G71.1";"";"Myotone Syndrome";"PN/AT";"EN3/SB3";"SC/SP6";""
-"G71.2";"";"Angeborene Myopathien";"WS/EX/ PN/AT";"EN3/SB3";"SC/SP6";""
-"G71.3";"";"Mitochondriale Myopathie, anderenorts nicht klassifiziert";"ZN/PN";"EN1/EN3/ SB3";"SC/SP6";""
-"G73.6*";"";"Myopathie bei Stoffwechselerkrankungen";"PN";"EN3/SB3";"SC/SP6";""
-"";"";"Infantile Zerebralparese:";"ZN";"EN1";"SP1/SP2/";""
-"G80.0";"";"Spastische tetraplegische Zerebralparese";"";"";"SP6/SC";""
-"G80.1";"";"Spastische diplegische Zerebralparese";"";"";"";""
-"G80.2";"";"Infantile hemiplegische Zerebralparese";"";"";"";""
-"G80.3";"";"Dyskinetische Zerebralparese";"";"";"";""
-"G80.4";"";"Ataktische Zerebralparese";"";"";"";""
-"G80.8";"";"Sonstige infantile Zerebralparese";"";"";"";""
-"G80.9";"";"Infantile Zerebralparese, nicht näher be- zeichnet";"";"";"";""
-"";"";"Hemiparese und Hemiplegie:";"ZN";"EN1";"";""
-"G81.0";"";"Schlaffe Hemiparese und Hemiplegie";"";"";"";""
-"G81.1";"";"Spastische Hemiparese und Hemiplegie";"";"";"";""
-"";"";"Paraparese und Paraplegie, Tetraparese und Tetraplegie:";"ZN";"EN1/EN2";"";""
-"G82.0-";"";"Schlaffe Paraparese und Paraplegie";"";"";"";""
-"G82.1-";"";"Spastische Paraparese und Paraplegie";"";"";"";""
-"G82.2-";"";"Paraparese und Paraplegie, nicht näher bezeichnet";"";"";"";""
-"G82.3-";"";"Schlaffe Tetraparese und Tetraplegie";"";"";"";""
-"G82.4-";"";"Spastische Tetraparese und Tetraplegie";"";"";"";""
-"G82.5-";"";"Tetraparese und Tetraplegie, nicht näher bezeichnet";"";"";"";""
-"G91.2-";"";"Normaldruckhydrozephalus";"ZN";"EN1";"";""
-"G93.1";"";"Anoxische Hirnschädigung, anderenorts nicht klassifiziert";"ZN";"EN1";"SC";"Wachkoma (apallisches Syndrom, auch infolge Hypoxie)"
-"G93.80";"";"Apallisches Syndrom";"";"";"";""
-"G95.0";"";"Syringomyelie und Syringobulbie";"ZN";"EN1/EN2";"";""
-"";"";"Subarachnoidalblutung:";"ZN";"EN1";"SC/SP5/ SP6/ST1";"längstens 1 Jahr nach Akutereignis"
-"I60.0";"";"Subarachnoidalblutung, vom Karotis- siphon oder der Karotisbifurkation aus- gehend";"";"";"";""
-"I60.1";"";"Subarachnoidalblutung, von der
-A. cerebri media ausgehend";"";"";"";""
-"I60.2";"";"Subarachnoidalblutung, von der
-A. communicans anterior ausgehend";"";"";"";""
-"I60.3";"";"Subarachnoidalblutung, von der
-A. communicans posterior ausgehend";"";"";"";""
-"I60.4";"";"Subarachnoidalblutung, von der
-A. basilaris ausgehend";"";"";"";""
-"I60.5";"";"Subarachnoidalblutung, von der A. verte- bralis ausgehend";"";"";"";""
-"I60.6";"";"Subarachnoidalblutung, von sonstigen intrakraniellen Arterien ausgehend";"";"";"";""
-"I60.7";"";"Subarachnoidalblutung, von nicht näher bezeichneter intrakranieller Arterie aus- gehend";"";"";"";""
-"I60.8";"";"Sonstige Subarachnoidalblutung";"";"";"";""
-"I60.9";"";"Subarachnoidalblutung, nicht näher be- zeichnet";"";"";"";""
-"";"";"Intrazerebrale Blutung:";"ZN";"EN1";"SC/SP5/ SP6/ST1";"längstens 1 Jahr nach Akutereignis"
-"I61.0";"";"Intrazerebrale Blutung in die Großhirnhe- misphäre, subkortikal";"";"";"";""
-"I61.1";"";"Intrazerebrale Blutung in die Großhirnhe- misphäre, kortikal";"";"";"";""
-"I61.2";"";"Intrazerebrale Blutung in die Großhirnhe- misphäre, nicht näher bezeichnet";"";"";"";""
-"I61.3";"";"Intrazerebrale Blutung in den Hirnstamm";"";"";"";""
-"I61.4";"";"Intrazerebrale Blutung in das Kleinhirn";"";"";"";""
-"I61.5";"";"Intrazerebrale intraventrikuläre Blutung";"";"";"";""
-"I61.6";"";"Intrazerebrale Blutung an mehreren Lokalisationen";"";"";"";""
-"I61.8";"";"Sonstige intrazerebrale Blutung";"";"";"";""
-"I61.9";"";"Intrazerebrale Blutung, nicht näher be- zeichnet";"";"";"";""
-"";"";"Hirninfarkt:";"ZN";"EN1";"SC/SP5/ SP6/ST1";"längstens 1 Jahr nach Akutereignis"
-"I63.0";"";"Hirninfarkt durch Thrombose präzerebra- ler Arterien";"";"";"";""
-"I63.1";"";"Hirninfarkt durch Embolie präzerebraler Arterien";"";"";"";""
-"I63.2";"";"Hirninfarkt durch nicht näher bezeichne- ten Verschluss oder Stenose präzerebra- ler Arterien";"";"";"";""
-"I63.3";"";"Hirninfarkt durch Thrombose zerebraler Arterien";"";"";"";""
-"I63.4";"";"Hirninfarkt durch Embolie zerebraler Arterien";"";"";"";""
-"I63.5";"";"Hirninfarkt durch nicht näher bezeichne- ten Verschluss oder Stenose zerebraler Arterien";"";"";"";""
-"I63.6";"";"Hirninfarkt durch Thrombose der Hirn- venen, nichteitrig";"";"";"";""
-"I63.8";"";"Sonstiger Hirninfarkt";"";"";"";""
-"I63.9";"";"Hirninfarkt, nicht näher bezeichnet";"";"";"";""
-"I64";"";"Schlaganfall, nicht als Blutung oder In- farkt bezeichnet";"";"";"";""
-"";"";"Folgen einer zerebrovaskulären Krankheit:";"ZN";"EN1";"SC/SP5/ SP6/ST1";"längstens 1 Jahr nach Akutereignis"
-"I69.0";"";"Folgen einer Subarachnoidalblutung";"";"";"";""
-"I69.1";"";"Folgen einer intrazerebralen Blutung";"";"";"";""
-"I69.2";"";"Folgen einer sonstigen nichttraumati- schen intrakraniellen Blutung";"";"";"";""
-"I69.3";"";"Folgen eines Hirninfarktes";"";"";"";""
-"I69.4";"";"Folgen eines Schlaganfalls, nicht als Blutung oder Infarkt bezeichnet";"";"";"";""
-"I69.8";"";"Folgen sonstiger und nicht näher bezeich- neter zerebrovaskulärer Krankheiten";"";"";"";""
-"";"";"Enzephalozele:";"ZN/AT/ SO1/SO3";"EN1";"SC/SP1/ SP5/SP6";""
-"Q01.0";"";"Frontale Enzephalozele";"";"";"";""
-"Q01.1";"";"Nasofrontale Enzephalozele";"";"";"";""
-"Q01.2";"";"Okzipitale Enzephalozele";"";"";"";""
-"Q01.8";"";"Enzephalozele sonstiger Lokalisationen";"";"";"";""
-"Q01.9";"";"Enzephalozele, nicht näher bezeichnet";"";"";"";""
-"";"";"Angeborener Hydrozephalus:";"ZN/AT/ SO1/SO3";"EN1";"SC/SP1/ SP5/SP6";""
-"Q03.0";"";"Fehlbildungen des Aquaeductus cerebri";"";"";"";""
-"Q03.1";"";"Atresie der Apertura mediana [Foramen Magendii] oder der Aperturae laterales [Foramina Luschkae] des vierten Ventri- kels";"";"";"";""
-"Q03.8";"";"Sonstiger angeborener Hydrozephalus";"";"";"";""
-"Q03.9";"";"Angeborener Hydrozephalus, nicht näher bezeichnet";"";"";"";""
-"";"";"Sonstige angeborene Fehlbildungen des Gehirns:";"ZN/AT/ SO1/SO3";"EN1";"SC/SP1/ SP5/SP6";""
-"Q04.0";"";"Angeborene Fehlbildungen des Corpus callosum";"";"";"";""
-"Q04.1";"";"Arrhinenzephalie";"";"";"";""
-"Q04.2";"";"Holoprosenzephalie-Syndrom";"";"";"";""
-"Q04.3";"";"Sonstige Reduktionsdeformitäten des Gehirns";"";"";"";""
-"Q04.4";"";"Septooptische Dysplasie";"";"";"";""
-"Q04.5";"";"Megalenzephalie";"";"";"";""
-"Q04.6";"";"Angeborene Gehirnzysten";"";"";"";""
-"Q04.8";"";"Sonstige näher bezeichnete angeborene Fehlbildungen des Gehirns";"";"";"";""
-"Q04.9";"";"Angeborene Fehlbildung des Gehirns, nicht näher bezeichnet";"";"";"";""
-"";"";"Spina bifida:";"ZN/AT/ SO1/SO3";"EN1/EN2";"SC/SP1/ SP5/SP6";""
-"Q05.0";"";"Zervikale Spina bifida mit Hydrozephalus";"";"";"";""
-"Q05.1";"";"Thorakale Spina bifida mit Hydrozephalus";"";"";"";""
-"Q05.2";"";"Lumbale Spina bifida mit Hydrozephalus";"";"";"";""
-"Q05.3";"";"Sakrale Spina bifida mit Hydrozephalus";"";"";"";""
-"Q05.4";"";"Nicht näher bezeichnete Spina bifida mit Hydrozephalus";"";"";"";""
-"Q05.5";"";"Zervikale Spina bifida ohne Hydrozepha- lus";"";"";"";""
-"Q05.6";"";"Thorakale Spina bifida ohne Hydroze- phalus";"";"";"";""
-"Q05.7";"";"Lumbale Spina bifida ohne Hydrozepha- lus";"";"";"";""
-"Q05.8";"";"Sakrale Spina bifida ohne Hydrozephalus";"";"";"";""
-"Q05.9";"";"Spina bifida, nicht näher bezeichnet";"";"";"";""
-"";"";"Sonstige angeborene Fehlbildungen des Rückenmarkes:";"ZN/AT/SO1/ SO3";"EN2";"SC/SP1/SP6";""
-"Q06.0";"";"Amyelie";"";"";"";""
-"Q06.1";"";"Hypoplasie und Dysplasie des Rücken- markes";"";"";"";""
-"Q06.2";"";"Diastematomyelie";"";"";"";""
-"Q06.3";"";"Sonstige angeborene Fehlbildungen der Cauda equina";"";"";"";""
-"Q06.4";"";"Hydromyelie";"";"";"";""
-"Q06.8";"";"Sonstige näher bezeichnete angeborene Fehlbildungen des Rückenmarkes";"";"";"";""
-"Q06.9";"";"Angeborene Fehlbildung des Rückenmar- kes, nicht näher bezeichnet";"";"";"";""
-"";"";"Verletzungen der Nerven und des Rückenmarkes in Halshöhe:";"ZN/AT";"EN1/EN2";"";"längstens 1 Jahr nach Akutereignis"
-"S14.0";"";"Kontusion und Ödem des zervikalen Rückenmarkes";"";"";"";""
-"S14.1-";"";"Sonstige und nicht näher bezeichnete Verletzungen des zervikalen Rückenmar- kes";"";"";"";""
-"S14.2";"";"Verletzung von Nervenwurzeln der Hals- wirbelsäule";"";"";"";""
-"S14.3";"";"Verletzung des Plexus brachialis";"ZN/AT";"EN1/EN2/";"";"längstens 1 Jahr nach Akutereignis"
-"S14.4";"";"Verletzung peripherer Nerven des Halses";"";"EN3";"";""
-"S14.5";"";"Verletzung zervikaler sympathischer Nerven";"ZN/AT";"EN1/EN2";"";"längstens 1 Jahr nach Akutereignis"
-"";"";"Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe:";"ZN";"EN1/EN2";"";"längstens 1 Jahr nach Akutereignis"
-"S14.6";"";"Verletzung sonstiger und nicht näher be- zeichneter Nerven des Halses";"";"";"";""
-"S24.0";"";"Kontusion und Ödem des thorakalen Rückenmarkes";"";"";"";""
-"S24.1-";"";"Sonstige und nicht näher bezeichnete Verletzungen des thorakalen Rückenmar- kes";"";"";"";""
-"S24.2";"";"Verletzung von Nervenwurzeln der Brust- wirbelsäule";"";"";"";""
-"S24.3";"";"Verletzung peripherer Nerven des Thorax";"";"";"";""
-"S24.4";"";"Verletzung thorakaler sympathischer Nerven";"";"";"";""
-"S24.5";"";"Verletzung sonstiger Nerven des Thorax";"";"";"";""
-"S24.6";"";"Verletzung eines nicht näher bezeichne- ten Nervs des Thorax";"";"";"";""
-"";"";"Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens:";"ZN";"EN1/EN2";"";"längstens 1 Jahr nach Akutereignis"
-"S34.0";"";"Kontusion und Ödem des lumbalen Rü- ckenmarkes [Conus medullaris]";"";"";"";""
-"S34.1-";"";"Sonstige Verletzung des lumbalen Rü- ckenmarkes";"";"";"";""
-"S34.2";"";"Verletzung von Nervenwurzeln der Len- denwirbelsäule und des Kreuzbeins";"";"";"";""
-"S34.3-";"";"Verletzung der Cauda equina";"";"";"";""
-"S34.4";"";"Verletzung des Plexus lumbosacralis";"";"";"";""
-"S34.5";"";"Verletzung sympathischer Nerven der Lendenwirbel-, Kreuzbein- und Becken- region";"ZN";"EN1/EN2";"";"längstens 1 Jahr nach Akutereignis"
-"S34.6";"";"Verletzung eines oder mehrerer periphe- rer Nerven des Abdomens, der Lumbosa- kralgegend und des Beckens";"";"";"";""
-"S34.8";"";"Verletzung  sonstiger und nicht näher bezeichneter Nerven in Höhe des Abdo- mens, der Lumbosakralgegend und des Beckens";"";"";"";""
-"T09.3";"";"Verletzung des Rückenmarkes, Höhe nicht näher bezeichnet";"ZN/AT";"EN2";"";"längstens 1 Jahr nach Akutereignis"
-"KRANKHEITEN DER WIRBELSÄULE UND DES SKELETTSYSTEMS";"";"";"";"";"";""
-"T90.5";"";"Folgen einer intrakraniellen Verletzung";"ZN/AT/SO3";"EN1";"SC/SP5 SP6";"Folgen einer Ver- letzung, die unter S06.- klassifizierbar ist:
-- nicht umfasst: S06.0 Gehirner- schütterung
-- umfasst: S06.1 bis S06.9
-Hinweis: Folgen oder Spätfolgen, die ein Jahr oder länger nach der akuten Verletzung bestehen"
-"M40.0-";"";"Kyphose als Haltungsstörung";"WS";"";"";"ab Gesamtkypho- sewinkel über 60° bei Erwachsenen"
-"M40.1-";"";"Sonstige sekundäre Kyphose";"";"";"";""
-"M41.0-";"";"Idiopathische Skoliose beim Kind";"WS/EX";"SB1";"";"Skoliose über 20° nach Cobb bei Kindern bis zum vollendeten 18. Lebensjahr"
-"M41.1-";"";"Idiopathische Skoliose beim Jugend- lichen";"";"";"";""
-"M41.2-";"";"Sonstige idiopathische Skoliose";"WS/AT";"SB1";"";"ab 50° nach Cobb bei Erwachsenen"
-"M41.5-";"";"Sonstige sekundäre Skoliose";"";"";"";""
-"M42.04";"";"Juvenile Osteochondrose der Wirbelsäule (Thorakalbereich)";"WS";"";"";"fixierte Kyphose ab Gesamtkyphose- winkel über 40° bei Kindern bis zum vollendeten 18.
-Lebensjahr"
-"M42.05";"";"Juvenile Osteochondrose der Wirbelsäule (Thorakolumbalbereich)";"";"";"";""
-"M47.0-";"G99.2";"Arteria-spinalis-anterior-Kompressions- syndrom und Arteria-vertebralis-Kompres- sionssyndrom mit Myelopathie";"WS/EX/ ZN";"EN2";"";"längstens 6 Monate nach Akutereignis
-Voraussetzung für die Anerkennung als besonderer Ver- ordnungsbedarf ist die Angabe beider ICD-10-Diagno- seschlüssel"
-"M47.1-";"G99.2";"Sonstige Spondylose mit Myelopathie";"";"";"";""
-"M47.2-";"G55.2";"Sonstige Spondylose mit Radikulopathie";"";"";"";""
-"M47.9-";"G99.2";"Spondylose, nicht näher bezeichnet mit Myelopathie";"";"";"";""
-"M47.9-";"G55.2";"Spondylose, nicht näher bezeichnet mit Radikulopathie";"";"";"";""
-"M48.0-";"G55.3";"Spinalkanalstenose mit Radikulopathie";"";"";"";""
-"M50.0";"G99.2";"Zervikaler Bandscheibenschaden mit Myelopathie";"";"";"";""
-"M50.1";"G55.1";"Zervikaler Bandscheibenschaden mit Radikulopathie";"";"";"";""
-"M51.0";"G99.2";"Lumbale und sonstige Bandscheiben- schäden mit Myelopathie";"";"";"";""
-"";"";"Schulterläsionen:";"EX";"";"";""
-"M51.1";"G55.1";"Lumbale und sonstige Bandscheiben- schäden mit Radikulopathie";"";"";"";""
-"M75.1";"";"Läsionen der Rotatorenmanschette";"";"";"";""
-"";"";"Sonstige Osteopathien:";"";"";"";""
-"M89.0-";"";"Neurodystrophie [Algodystrophie]";"EX/LY/ PN";"SB2";"";"längstens 1 Jahr nach Akutereignis"
-"G90.5-";"";"Komplexes regionales Schmerzsyndrom, Typ I";"";"";"";""
-"G90.6-";"";"Komplexes regionales Schmerzsyndrom, Typ II";"";"";"";""
-"";"";"Verlust von oberen und unteren Extremi- täten";"EX/WS/ CS/LY";"SB2";"";"längstens 12 Monate
-nach Akutereignis"
-"G90.7-";"";"Komplexes regionales Schmerzsyndrom, sonstiger und nicht näher bezeichneter Typ";"";"";"";""
-"Z89.1";"";"Einseitiger Verlust der Hand und des Handgelenks";"";"";"";""
-"Z89.2";"";"Einseitiger Verlust der oberen Extremität (oberhalb des Handgelenkes)";"";"";"";""
-"Z89.5";"";"Einseitiger Verlust der unteren Extremität unterhalb oder bis zum Knie";"";"";"";""
-"Z89.3";"";"Beidseitiger (teilweiser) Verlust der obe- ren Extremitäten";"EX/WS/ CS/LY";"SB2";"";""
-"Z89.6";"";"Einseitiger Verlust der unteren Extremität (oberhalb des Knies)";"";"";"";""
-"Z89.7";"";"Beidseitiger (teilweiser) Verlust der unte- ren Extremitäten";"";"";"";""
-"Z89.8";"";"Verlust der oberen und unteren Extremi- täten [jede Höhe]";"";"";"";""
-"";"";"Seropositive chronische Polyarthritis:";"WS/EX/AT";"SB1";"";""
-"ENTZÜNDLICHE POLYARTHROPATHIEN, SYSTEMKRANKHEITEN DES BINDEGEWEBES UND SPONDYLOPATHIEN";"";"";"";"";"";""
-"M05.0-";"";"Felty-Syndrom";"";"";"";""
-"M05.1-";"";"Lungenmanifestation der seropositiven chronischen Polyarthritis";"";"";"";""
-"M05.2-";"";"Vaskulitis bei seropositiver chronischer Polyarthritis";"";"";"";""
-"M05.3-";"";"Seropositive chronische Polyarthritis mit Beteiligung sonstiger Organe und Organ- systeme";"";"";"";""
-"M05.8-";"";"Sonstige seropositive chronische Poly- arthritis";"";"";"";""
-"M05.9-";"";"Seropositive chronische Polyarthritis, nicht näher bezeichnet";"";"";"";""
-"M06.0-";"";"Seronegative chronische Polyarthritis";"WS/EX";"SB1";"";""
-"";"";"Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten:";"WS/EX";"SB1";"";""
-"M06.1-";"";"Adulte Form der Still-Krankheit";"WS/EX";"SB1";"";""
-"M07.0-";"";"Distale interphalangeale Arthritis psoria- tica";"";"";"";""
-"M07.1-";"";"Arthritis multilans";"";"";"";""
-"M07.2";"";"Spondylitis psoriatica";"";"";"";""
-"M07.3-";"";"Sonstige psoriatische Arthritiden";"";"";"";""
-"M07.4-";"";"Arthritis bei Crohn-Krankheit [Enteritis regionalis]";"";"";"";""
-"M07.5-";"";"Arthritis bei Colitis ulcerosa";"";"";"";""
-"M07.6-";"";"Sonstige Arthritiden bei gastrointestina- len Grundkrankheiten";"";"";"";""
-"";"";"Juvenile Arthritis:";"WS/EX";"SB1";"";""
-"M08.0-";"";"Juvenile chronische Polyarthritis, adulter Typ";"";"";"";""
-"M08.1-";"";"Juvenile Spondylitis ankylosans";"";"";"";""
-"M08.2-";"";"Juvenile chronische Arthritis, systemisch beginnende Form";"";"";"";""
-"M08.3";"";"Juvenile chronische Arthritis (seronega- tiv), polyartikuläre Form";"";"";"";""
-"M08.4-";"";"Juvenile chronische Arthritis, oligoartiku- läre Form";"";"";"";""
-"M08.7-";"";"Vaskulitis bei juveniler Arthritis";"";"";"";""
-"M08.8-";"";"Sonstige juvenile Arthritis";"";"";"";""
-"M08.9-";"";"Juvenile Arthritis, nicht näher bezeichnet";"";"";"";""
-"M30.0";"";"Panarteriitis nodosa";"EX/ZN/ PN";"EN1/SB1/ SB3";"SC";""
-"M31.3";"";"Granulomatose mit Polyangiitis*";"";"";"";""
-"M32.1";"";"Systemischer Lupus erythematodes mit Beteiligung von Organen oder Organsys- temen";"EX/WS/ AT";"SB1/SB3";"";""
-"M32.8";"";"Sonstige Formen des systemischen Lupus erythematodes";"";"";"";""
-"M33.0";"";"Juvenile Dermatomyositis";"EX/ZN/ PN";"EN1/SB1/ SB3";"SC";""
-"M33.1";"";"Sonstige Dermatomyositis";"";"";"";""
-"M33.2";"";"Polymyositis";"";"";"";""
-"";"";"Systemische Sklerose:";"WS/EX/";"SB1/SB3";"";""
-"M34.0";"";"Progressive systemische Sklerose";"AT";"";"";""
-"M34.1";"";"CR(E)ST-Syndrom";"";"";"";""
-"M34.2";"";"Systemische Sklerose, durch Arzneimittel oder chemische Substanzen induziert";"";"";"";""
-"M34.8";"";"Sonstige Formen der systemischen Sklerose";"";"";"";""
-"M34.9";"";"Systemische Sklerose, nicht näher be- zeichnet";"";"";"";""
-"";"";"Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krank- heiten";"EX/CS";"SB1";"";""
-"M36.2";"";"Arthropathia haemophilica";"";"";"";""
-"ANGEBORENE FEHLBILDUNGEN DES MUSKEL-SKELETT-SYSTEMS ODER MIT BETEILIGUNG MEHRERER SYSTEME";"";"";"";"";"";""
-"M45.0-";"";"Spondylitis ankylosans";"WS/EX";"SB1";"";""
-"Q79.6";"";"Ehlers-Danlos-Syndrom";"WS/EX/CS";"SB1/SB2";"";""
-"Q87.4";"";"Marfan-Syndrom";"WS/EX/ AT";"SB1/SB3";"";""
-"ANGEBORENE FEHLBILDUNGEN UND DEFORMITÄTEN DES MUSKEL-SKELETT-SYSTEMS";"";"";"";"";"";""
-"Q66.0";"";"Pes equinovarus congenitus (Klumpfuß)";"EX";"SB2";"";""
-"Q68.0";"";"Angeborene Deformitäten des M. sternoc- leidomastoideus";"EX";"SB3";"";""
-"";"";"Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen):";"CS/AT/PN/ WS/EX/ZN/ GE/LY/ SO1/SO2/ SO3/SO4";"SB2";"";""
-"Q71.0";"";"Angeborenes vollständiges Fehlen der oberen Extremität(en)";"";"";"";""
-"Q71.1";"";"Angeborenes Fehlen des Ober- und Unter- armes bei vorhandener Hand";"";"";"";""
-"Q71.2";"";"Angeborenes Fehlen sowohl des Unter- armes als auch der Hand";"";"";"";""
-"Q71.3";"";"Angeborenes Fehlen der Hand oder eines oder mehrerer Finger";"";"";"";""
-"Q71.4";"";"Longitudinaler Reduktionsdefekt des Radius";"";"";"";""
-"Q71.5";"";"Longitudinaler Reduktionsdefekt der Ulna";"";"";"";""
-"Q71.6";"";"Spalthand";"";"";"";""
-"Q71.8";"";"Sonstige Reduktionsdefekte der oberen Extremität(en)";"";"";"";""
-"Q71.9";"";"Reduktionsdefekt der oberen Extremität, nicht näher bezeichnet";"";"";"";""
-"";"";"Reduktionsdefekte der unteren Extremi- tät (insbesondere in Folge von Conter- gan- Schädigungen):";"CS/AT/PN/ WS/EX/ZN/ GE/LY/ SO1/SO2/ SO3/SO4";"SB2";"";""
-"Q72.0";"";"Angeborenes vollständiges Fehlen der unteren Extremität(en)";"";"";"";""
-"Q72.1";"";"Angeborenes Fehlen des Ober- und Unter- schenkels bei vorhandenem Fuß";"";"";"";""
-"Q72.2";"";"Angeborenes Fehlen sowohl des Unter- schenkels als auch des Fußes";"";"";"";""
-"Q72.3";"";"Angeborenes Fehlen des Fußes oder einer oder mehrerer Zehen";"";"";"";""
-"Q72.4";"";"Longitudinaler Reduktionsdefekt des Femurs";"";"";"";""
-"Q72.5";"";"Longitudinaler Reduktionsdefekt der Tibia";"";"";"";""
-"Q72.6";"";"Longitudinaler Reduktionsdefekt der Fibula";"";"";"";""
-"Q72.7";"";"Spaltfuß";"";"";"";""
-"Q72.8";"";"Sonstige Reduktionsdefekte der unteren Extremität(en)";"";"";"";""
-"Q72.9";"";"Reduktionsdefekt der unteren Extremität, nicht näher bezeichnet";"";"";"";""
-"";"";"Reduktionsdefekte nicht näher bezeich- neter Extremitäten (insbesondere in Folge von Contergan-Schädigungen):";"";"";"";""
-"Q73.0";"";"Angeborenes Fehlen nicht näher bezeich- neter Extremität(en)";"";"";"";""
-"";"";"";"DIAGNOSEGRUPPE";"";"";""
-"Q73.1";"";"Phokomelie nicht näher bezeichneter Extremität(en)";"";"";"";""
-"Q73.8";"";"Sonstige Reduktionsdefekte nicht näher bezeichneter Extremität(en)";"";"";"";""
-"Q74.3";"";"Arthrogryposis multiplex congenita";"EX";"SB1";"";""
-"Q78.0";"";"Osteogenesis imperfecta";"EX/WS";"SB1";"";""
-"Q86.80";"";"Thalidomid-Embryopathie";"";"";"SP3/SP4/ SP6";""
-"Q87.0";"";"Angeborene Fehlbildungssyndrome mit vorwiegender Beteiligung des Gesichtes";"WS/EX";"SB2";"SP3/SF/ SC";""
-"Q87.2";"";"Angeborene Fehlbildungssyndrome mit vorwiegender Beteiligung der Extremi- täten";"EX/CS/LY";"SB1/SB2";"";""
-"ZUSTAND NACH OPERATIVEN EINGRIFFEN DES SKELETTSYSTEMS";"";"";"";"";"";""
-"M24.41";"Z98.8";"Habituelle Luxation und Subluxation eines Gelenkes: Schulterregion";"EX";"SB2";"";""
-"Z96.60";"Z98.8";"Vorhandensein einer Schulterprothese";"EX";"SB2";"";""
-"Z96.64";"Z98.8";"Vorhandensein einer Hüftgelenkprothese";"EX/LY";"SB2";"";""
-"ERKRANKUNGEN DES LYMPHSYSTEMS";"";"";"";"";"";""
-"Z96.65";"Z98.8";"Vorhandensein einer Kniegelenkprothese";"";"";"";""
-"C00- C97";"";"Bösartige Neubildungen";"LY";"";"";"bösartige Neubil- dungen nach OP/Radiatio, ins- besondere bei
-- bösartigem Melanom
-- Mammakarzinom
-- Malignome Kopf/ Hals
-- Malignome des kleinen Beckens (weibliche, männ- li-che Genitalorga- ne, Harnorgane)"
-"I89.01";"";"Lymphödem der oberen und unteren Extremität(en), Stadium II";"LY";"";"";""
-"I89.02";"";"Lymphödem der oberen und unteren Extremität(en), Stadium III";"";"";"";""
-"I89.04";"";"Lymphödem, sonstige Lokalisation, Stadium II";"";"";"";""
-"I89.05";"";"Lymphödem, sonstige Lokalisation, Stadium III";"";"";"";""
-"I97.21";"";"Lymphödem nach (partieller) Mastekto- mie (mit Lymphadenektomie), Stadium II";"";"";"";""
-"I97.22";"";"Lymphödem nach (partieller) Mastekto- mie (mit Lymphadenektomie), Stadium III";"";"";"";""
-"I97.82";"";"Lymphödem nach medizinischen Maß- nahmen am axillären Lymphabflussge- biet, Stadium II";"";"";"";""
-"I97.83";"";"Lymphödem nach medizinischen Maß- nahmen am axillären Lymphabflussge- biet, Stadium III";"";"";"";""
-"I97.85";"";"Lymphödem nach medizinischen Maß- nahmen am inguinalen Lymphabflussge- biet, Stadium II";"";"";"";""
-"I97.86";"";"Lymphödem nach medizinischen Maß- nahmen am inguinalen Lymphabflussge- biet, Stadium III";"";"";"";""
-"Q82.01";"";"Hereditäres Lymphödem der oberen und unteren Extremität(en), Stadium II";"";"";"";""
-"Q82.02";"";"Hereditäres Lymphödem der oberen und unteren Extremität(en), Stadium III";"";"";"";""
-"Q82.04";"";"Hereditäres Lymphödem, sonstige Lokali- sation, Stadium II";"";"";"";""
-"Q82.05";"";"Hereditäres Lymphödem, sonstige Lokali- sation, Stadium III";"";"";"";""
-"";"";"Gaumenspalte mit Lippenspalte:";"";"";"SP3/SF";""
-"STÖRUNGEN DER SPRACHE";"";"";"";"";"";""
-"Q37.0";"";"Spalte des harten Gaumens mit beidseiti- ger Lippenspalte";"";"";"";""
-"Q37.1";"";"Spalte des harten Gaumens mit einseiti- ger Lippenspalte";"";"";"";""
-"Q37.2";"";"Spalte des weichen Gaumens mit beidsei- tiger Lippenspalte";"";"";"";""
-"Q37.3";"";"Spalte des weichen Gaumens mit einseiti- ger Lippenspalte";"";"";"";""
-"Q37.4";"";"Spalte des harten und des weichen Gau- mens mit beidseitiger Lippenspalte";"";"";"";""
-"Q37.5";"";"Spalte des harten und des weichen Gau- mens mit einseitiger Lippenspalte";"";"";"";""
-"Q37.8";"";"Gaumenspalte, nicht näher bezeichnet, mit beidseitiger Lippenspalte";"";"";"";""
-"ENTWICKLUNGSSTÖRUNGEN";"";"";"";"";"";""
-"Q37.9";"";"Gaumenspalte, nicht näher bezeichnet, mit einseitiger Lippenspalte";"";"";"";""
-"";"";"Umschriebene Entwicklungsstörungen des Sprechens und der Sprache:";"";"";"SP1/SP2";"bis zum vollende- ten 12. Lebensjahr"
-"F80.1";"";"Expressive Sprachstörung";"";"";"";""
-"F80.2-";"";"Rezeptive Sprachstörung";"";"";"";""
-"F83";"";"Kombinierte umschriebene Entwicklungs- störungen";"ZN";"EN1";"SP1/SP2/ SP3/SP6/ RE2";"bis zum vollende- ten 18. Lebensjahr"
-"";"";"Tiefgreifende Entwicklungsstörungen:";"ZN";"EN1/PS1";"SP1";""
-"F84.0";"";"Frühkindlicher Autismus";"";"";"";""
-"F84.1";"";"Atypischer Autismus";"";"";"";""
-"F84.3";"";"Andere desintegrative Störung des Kin- desalters";"";"";"";""
-"F84.4";"";"Überaktive Störung mit Intelligenzminde- rung und Bewegungsstereotypien";"";"";"";""
-"F84.5";"";"Asperger-Syndrom";"";"";"";""
-"F84.8";"";"Sonstige tief greifende Entwicklungs- störungen";"";"";"";""
-"";"";"Down-Syndrom:";"ZN";"EN1";"SP1/SP3/ RE1/SC";""
-"CHROMOSOMENANOMALIEN";"";"";"";"";"";""
-"F84.2";"";"Rett-Syndrom";"ZN/WS/ EX/AT";"PS1/EN1/ SB1/SB3";"SP1/SC";""
-"Q90.0";"";"Trisomie 21, meiotische Non-disjunction";"";"";"";""
-"Q90.1";"";"Trisomie 21, Mosaik (mitotische Non-dis- junction)";"";"";"";""
-"Q90.2";"";"Trisomie 21, Translokation";"";"";"";""
-"";"";"Edwards-Syndrom und Patau-Syndrom:";"ZN";"EN1";"SP1";""
-"Q90.9";"";"Down-Syndrom, nicht näher bezeichnet";"";"";"";""
-"Q91.0";"";"Trisomie 18, meiotische Non-disjunction";"";"";"";""
-"Q91.1";"";"Trisomie 18, Mosaik (mitotische Non-dis- junction)";"";"";"";""
-"Q91.2";"";"Trisomie 18, Translokation";"";"";"";""
-"Q91.3";"";"Edwards-Syndrom, nicht näher bezeich- net";"";"";"";""
-"Q91.4";"";"Trisomie 13, meiotische Non-disjunction";"";"";"";""
-"Q91.5";"";"Trisomie 13, Mosaik (mitotische Non-dis- junction)";"";"";"";""
-"Q91.6";"";"Trisomie 13, Translokation";"";"";"";""
-"Q91.7";"";"Patau-Syndrom, nicht näher bezeichnet";"";"";"";""
-"Q93.3";"";"Deletion des kurzen Armes des Chromo- soms 4 (Wolf-Hirschhorn-Syndrom)";"EX/WS";"SB1/SB2";"SP1";""
-"Q93.4";"";"Deletion des kurzen Armes des Chromo- soms 5";"WS/EX/ ZN";"EN1";"SP1";""
-"Q93.5";"";"Sonstige Deletion eines Chromosomen- teils (Angelmann-Syndrom)";"ZN/WS";"EN1/SB1/ SB2/PS1";"SP1";""
-"";"";"Turner-Syndrom:";"ZN";"EN1";"SP1";""
-"Q96.0";"";"Karyotyp 45,X";"";"";"";""
-"Q96.1";"";"Karyotyp 46,X iso (Xq)";"";"";"";""
-"Q96.2";"";"Karyotyp 46,X mit Gonosomenanomalie, ausgenommen iso (Xq)";"";"";"";""
-"Q96.3";"";"Mosaik, 45,X/46,XX oder 45,X/46,XY";"";"";"";""
-"Q96.4";"";"Mosaik, 45,X/sonstige Zelllinie(n) mit Gonosomenanomalie";"";"";"";""
-"Q96.8";"";"Sonstige Varianten des Turner-Syndroms";"";"";"";""
-"Q96.9";"";"Turner-Syndrom, nicht näher bezeichnet";"";"";"";""
-"Q99.2";"";"Fragiles X-Chromosom";"ZN/SO2";"EN1/SB3/ PS1/PS2";"SP1/SP3/SP5/ SF/RE1/RE2";""
-"STÖRUNGEN DER ATMUNG";"";"";"";"";"";""
-"";"";"Chronische obstruktive Lungenkrank- heiten:";"AT";"";"";""
-"J44.00";"";"Chronische obstruktive Lungenkrankheit mit akuter Infektion der unteren Atemwe- ge: FEV₁ < 35% des Sollwertes";"";"";"";""
-"J44.10";"";"Chronische obstruktive Lungenkrankheit mit akuter Exazerbation, nicht näher be- zeichnet: FEV₁ < 35% des Sollwertes";"";"";"";""
-"J44.80";"";"Sonstige näher bezeichnete chronische obstruktive Lungenkrankheit: FEV₁ < 35% des Sollwertes";"";"";"";""
-"J44.90";"";"Chronische obstruktive Lungenkrankheit, nicht näher bezeichnet: FEV₁ < 35% des Sollwertes";"";"";"";""
-"P27.1";"";"Bronchopulmonale Dysplasie mit Ursprung in der Perinatalperiode";"AT";"";"";""
-"GERIATRISCHE SYNDROME";"";"";"";"";"";""
-"P27.8";"";"Sonstige chronische Atemwegserkrankun- gen mit Ursprung in der Perinatalperiode";"";"";"";""
-"E41";"";"Alimentärer Marasmus";"";"";"SC";"ab vollendetem
-70. Lebensjahr, sofern dieser durch Schluckstörungen verursacht ist"
-"F00.0";"";"Demenz bei Alzheimer-Krankheit mit frühem Beginn (Typ 2)";"";"PS4";"";""
-"F00.1";"";"Demenz bei Alzheimer-Krankheit, mit spätem Beginn (Typ 1)";"";"PS4";"";"ab vollendetem
-70. Lebensjahr"
-"F00.2";"";"Demenz bei Alzheimer-Krankheit, atypi- sche oder gemischte Form";"";"";"";""
-"F01.0";"";"Vaskuläre Demenz mit akutem Beginn";"";"";"";""
-"F01.1";"";"Multiinfarkt-Demenz";"";"";"";""
-"F01.2";"";"Subkortikale vaskuläre Demenz";"";"";"";""
-"F01.3";"";"Gemischte kortikale und subkortikale vaskuläre Demenz";"";"";"";""
-"F01.8";"";"Sonstige vaskuläre Demenz";"";"";"";""
-"F02.3";"";"Demenz bei primärem Parkinson-Syn- drom";"";"";"";""
-"F02.8";"";"Demenz bei anderenorts klassifizierten Krankheitsbildern";"";"";"";""
-"F03";"";"Nicht näher bezeichnete Demenz";"";"";"";""
-"F41.0";"";"Panikstörung [episodisch paroxysmale Angst]";"";"PS2";"";"ab vollendetem
-70. Lebensjahr"
-"F41.1";"";"Generalisierte Angststörung";"";"";"";""
-"F41.2";"";"Angst und depressive Störung, gemischt";"";"";"";""
-"F41.3";"";"Andere gemischte Angststörungen";"";"";"";""
-"F41.8";"";"Sonstige spezifische Angststörungen";"";"";"";""
-"F41.9";"";"Angststörung, nicht näher bezeichnet";"";"";"";""
-"F45.40";"";"Anhaltende somatoforme Schmerzstörung";"CS";"PS2";"";"ab vollendetem
-70. Lebensjahr"
-"F45.41";"";"Chronische Schmerzstörung mit somati- schen und psychischen Faktoren";"";"";"";""
-"G54.6";"";"Phantomschmerz";"CS";"PS2";"";"ab vollendetem
-70. Lebensjahr"
-"H81.-";"";"Störungen der Vestibularfunktion";"WS/EX/ SO3";"";"";"ab vollendetem
-70. Lebensjahr"
-"H82";"";"Schwindelsyndrome bei anderenorts klassifizierten Krankheiten";"";"";"";""
-"N39.3";"";"Belastungsinkontinenz [Stressinkonti- nenz]";"SO2";"";"";"ab vollendetem
-70. Lebensjahr"
-"N39.4-";"";"Sonstige näher bezeichnete Harninkon- tinenz";"";"";"";""
-"R13.-";"";"Dysphagie";"";"";"SC";"ab vollendetem
-70. Lebensjahr"
-"R15";"";"Stuhlinkontinenz";"SO2";"";"";"ab vollendetem
-70. Lebensjahr"
-"R26.0";"";"Ataktischer Gang";"WS/EX/ SO3";"";"";"ab vollendetem
-70. Lebensjahr"
-"R26.1";"";"Paretischer Gang";"";"";"";""
-"R26.2";"";"Gehbeschwerden, anderenorts nicht klassifiziert";"";"";"";""
-"R29.6";"";"Sturzneigung, anderenorts nicht klassi- fiziert";"";"";"";""
-"R32";"";"Nicht näher bezeichnete Harninkontinenz";"SO2";"";"";"ab vollendetem
-70. Lebensjahr"
-"R42";"";"Schwindel und Taumel";"WS/EX/ SO3";"";"";"ab vollendetem
-70. Lebensjahr"
-"R52.1";"";"Chronischer unbeeinflussbarer Schmerz";"CS";"PS2";"";"ab vollendetem
-70. Lebensjahr"
-"R52.2";"";"Sonstiger chronischer Schmerz";"";"";"";""
-"R64";"";"Kachexie";"";"";"SC";"ab vollendetem
-70. Lebensjahr"
-"M80.0-";"";"Postmenopausale Osteoporose mit pa- thologischer Fraktur";"WS/EX";"";"";"ab vollendetem
-70. Lebensjahr"
-"M80.2-";"";"Inaktivitätsosteoporose mit pathologi- scher Fraktur";"";"";"";""
-"M80.3-";"";"Osteoporose mit pathologischer Fraktur infolge Malabsorption nach chirurgi- schem Eingriff";"";"";"";"längstens 6 Monate nach Akutereignis"
-"M80.5-";"";"Idiopathische Osteoporose mit pathologi- scher Fraktur";"";"";"";""
-"M80.8-";"";"Sonstige Osteoporose mit pathologischer Fraktur";"";"";"";""
-"STOFFWECHSELSTÖRUNGEN";"";"";"";"";"";""
-"E74.0";"";"Glykogenspeicherkrankheiten [Glyko- genose]";"ZN/PN/ AT/WS/ EX/CS/ SO1";"EN1/SB1/ SB3";"SC";""
-"E75.0";"";"GM2-Gangliosidose";"";"";"";""
-"E76.0";"";"Mukopolysaccharidose, Typ I";"";"";"";""
-"E88.20";"";"Lipödem, Stadium I";"LY";"";"";"nur im Zusammen- hang mit komplexer physikalischer Entstauungs- therapie (Manuelle Lymphdrainage, Kompressions-the- rapie, Übungs-be- handlung/Be-we- gungstherapie und Hautpflege); es sind nicht immer alle Komponenten zeitgleich erforder- lich
-befristet bis 31.12.2025"
-"E88.21";"";"Lipödem, Stadium II";"";"";"";""
-"";"";"";"";"";"";"nur verordnungs- fähig, wenn Er- nährungstherapie alternativlos ist, da ansonsten Tod oder Behinderung drohen (gemäß
-§ 42 HeilM-RL
-i.V.m. dem HeilM- Katalog)"
-"E88.22";"";"Lipödem, Stadium III";"";"";"";""
-"E84.-";"";"";"";"";"";""
-"FOLGEN EINER SARS-COV-2-INFEKTION (POST-COVID)";"";"";"";"";"";""
-"T20.3 T20.7";"";"Verbrennung 3. Grades des Kopfes und des Halses
-Verätzung 3. Grades des Kopfes und des Halses";"LY/CS/ EX/WS";"SB2";"ST1/ SP6/ SC";""
-"U09.9";"";"Post-COVID Syndrom";"WS/AT";"SB1/PS2/ PS3";"";""
-"VERBRENNUNGEN ODER VERÄTZUNGEN";"";"";"";"";"";""
-"KRANKHEITEN IM ZUSAMMENHANG MIT AUSSERKLINISCHER INTENSIVPFLEGE";"";"";"";"";"";""
-"Z99.0";"Z43.0";"Abhängigkeit (langzeit) vom Aspirator i.V.m.
-Versorgung eines Tracheostomas";"EX/ZN/PN/ AT/LY";"EN1/EN2/ EN3/SB1/ SB2";"SC/ST1";"Unter Einbindung der Ärztinnen und Ärzte, die die medizinische Behandlung der außerklinischen
-Intensivpflege ko- ordinieren"
-"Z99.1";"";"Abhängigkeit (langzeitig) vom Respirator";"";"";"";""
+﻿ICD1;ICD2;Diagnose;Physio;Ergo;Logo;Hinweis
+B94.1;;Folgezustände der Virusenzephalitis;ZN/SO3;EN1;SC/ST1/SP1/SP3/SP4/SP5/RE1/RE2/SF;längstens 1 Jahr nach Akutereignis
+C70.0;;Bösartige Neubildungen der Meningen: Hirnhäute;ZN/SO1/SO3;EN1/EN2;SC/ST1/SP1/SP2/SP3/SP5/;längstens 1 Jahr nach Akutereignis
+C70.1;;Rückenmarkhäute;ZN/SO1/SO3;EN1/EN2;SP6/RE1/RE2/;längstens 1 Jahr nach Akutereignis
+C70.9;;Meningen, nicht näher bezeichnet;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.0;;Bösartige Neubildung des Gehirns: Zerebrum, ausgenommen Hirnlappen und Ventrikel;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.1;;Bösartige Neubildung des Gehirns: Frontallappen;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.2;;Bösartige Neubildung des Gehirns: Temporallappen;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.3;;Bösartige Neubildung des Gehirns: Parietallappen;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.4;;Bösartige Neubildung des Gehirns: Okzipitallappen;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.5;;Bösartige Neubildung des Gehirns: Hirnventrikel;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.6;;Bösartige Neubildung des Gehirns: Zerebellum;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.7;;Bösartige Neubildung des Gehirns: Hirnstamm;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.8;;Bösartige Neubildung des Gehirns: Gehirn, mehrere Teilbereiche überlappend;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C71.9;;Bösartige Neubildung des Gehirns: Gehirn, nicht näher bezeichnet;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.0;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Rückenmark;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.1;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Cauda equina;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.2;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Nn. olfactorii [I. Hirnnerv];ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.3;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: N. opticus [II. Hirnnerv];ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.4;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: N. vestibulocochlearis [VIII. Hirnnerv];ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.5;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Sonstige und nicht näher bezeichnete Hirnnerven;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.8;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Gehirn und andere Teile des Zentralnervensystems, mehrere Teilbereiche überlappend;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+C72.9;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Zentralnervensystem, nicht näher bezeichnet;ZN/SO1/SO3;EN1/EN2;SF;längstens 1 Jahr nach Akutereignis
+G10;;Bösartige Neubildung des Rückenmarkes, der Hirnnerven und anderer Teile des Zentralnervensystems: Chorea Huntington;ZN;EN1;SC/SP5/SP6;längstens 1 Jahr nach Akutereignis
+G11.0;;Hereditäre Ataxie: Angeborene nichtprogressive Ataxie;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G11.1;;Hereditäre Ataxie: Früh beginnende zerebellare Ataxie;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G11.2;;Hereditäre Ataxie: Spät beginnende zerebellare Ataxie;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G11.3;;Hereditäre Ataxie: Zerebellare Ataxie mit defektem DNA-Reparatursystem;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G11.4;;Hereditäre Ataxie: Hereditäre spastische Paraplegie;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G11.8;;Hereditäre Ataxie: Sonstige hereditäre Ataxien;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G11.9;;Hereditäre Ataxie: Hereditäre Ataxie, nicht näher bezeichnet;ZN;EN1;SC;längstens 1 Jahr nach Akutereignis
+G12.0;;Spinale Muskelatrophie und verwandte Syndrome: Infantile spinale Muskelatrophie, Typ I [Typ Werdnig-Ho?mann];ZN/AT;EN2/SB3;SC/SP6;längstens 1 Jahr nach Akutereignis
+G12.1;;Spinale Muskelatrophie und verwandte Syndrome: Sonstige vererbte spinale Muskelatrophie;ZN/AT;EN2/SB3;SC/SP6;längstens 1 Jahr nach Akutereignis
+G12.2;;Spinale Muskelatrophie und verwandte Syndrome: Motoneuron-Krankheit;ZN/AT;EN2/SB3;SC/SP6;längstens 1 Jahr nach Akutereignis
+G12.8;;Spinale Muskelatrophie und verwandte Syndrome: Sonstige spinale Muskelatrophien und verwandte Syndrome;ZN/AT;EN2/SB3;SC/SP6;längstens 1 Jahr nach Akutereignis
+G12.9;;Spinale Muskelatrophie und verwandte Syndrome: Spinale Muskelatrophie, nicht näher bezeichnet;ZN/AT;EN2/SB3;SC/SP6;längstens 1 Jahr nach Akutereignis
+G14;;Spinale Muskelatrophie und verwandte Syndrome: Postpoliosyndrom;ZN/PN/AT;EN1/EN2/EN3;SC/SP6;längstens 1 Jahr nach Akutereignis
+G20.1-;;Primäres Parkinson-Syndrom: Primäres Parkinson-Syndrom mit mäßiger bis schwerer Beeinträchtigung (Stadien 3 oder 4 nach Hoehn und Yahr);ZN;EN1;SC/SP6;längstens 1 Jahr nach Akutereignis
+G20.2-;;Primäres Parkinson-Syndrom: Primäres Parkinson-Syndrom mit schwerster Beeinträchtigung (Stadium 5 nach Hoehn und Yahr);ZN;EN1;SC/SP6/ST1;längstens 1 Jahr nach Akutereignis
+G21.3;;Sekundäres Parkinson-Syndrom: Postenzephalitisches Parkinson-Syndrom;ZN;EN1;SC/SP6;längstens 1 Jahr nach Akutereignis
+G21.4;;Sekundäres Parkinson-Syndrom: Vaskuläres Parkinson-Syndrom;ZN;EN1;SC/SP6;längstens 1 Jahr nach Akutereignis
+G21.8;;Sekundäres Parkinson-Syndrom: Sonstiges sekundäres Parkinson-Syndrom;ZN;EN1;SC/SP6;längstens 1 Jahr nach Akutereignis
+G24.3;;Sekundäres Parkinson-Syndrom: Torticollis spasticus;ZN;EN1;SC/SP6;nur bei gleichzeitiger leitliniengerechter medikamentöser
+G35.0;;Multiple Sklerose [Encephalomyelitis disseminata]: Erstmanifestation einer multiplen Sklerose;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G35.1-;;Multiple Sklerose [Encephalomyelitis disseminata]: Multiple Sklerose mit vorherrschend schubförmigem Verlauf;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G35.2-;;Multiple Sklerose [Encephalomyelitis disseminata]: Multiple Sklerose mit primär-chronischem Verlauf;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G35.3-;;Multiple Sklerose [Encephalomyelitis disseminata]: Multiple Sklerose mit sekundär-chronischem Verlauf;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G35.9;;Multiple Sklerose [Encephalomyelitis disseminata]: Multiple Sklerose, nicht näher bezeichnet;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G36.0;;Sonstige akute disseminierte Demyelinisation: Neuromyelitis optica [Devic-Krankheit];ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G36.1;;Sonstige akute disseminierte Demyelinisation: Akute und subakute hämorrhagische Leukoenzephalitis [Hurst];ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G36.8;;Sonstige akute disseminierte Demyelinisation: Sonstige näher bezeichnete akute disseminierte Demyelinisation;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G36.9;;Sonstige akute disseminierte Demyelinisation: Akute disseminierte Demyelinisation, nicht näher bezeichnet;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.0;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Diffuse Hirnsklerose;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.1;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Zentrale Demyelinisation des Corpus callosum;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.2;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Zentrale pontine Myelinolyse;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.3;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Myelitis transversa acuta bei demyelinisierender Krankheit des Zentralnervensystems;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.4;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Subakute nekrotisierende Myelitis [FoixAlajouanine-Syndrom];ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.5;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Konzentrische Sklerose [Baló-Krankheit];ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.8;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Sonstige näher bezeichnete demyelinisierende Krankheiten des Zentralnervensystems;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G37.9;;Sonstige demyelinisierende Krankheiten des Zentralnervensystems: Demyelinisierende Krankheit des Zentralnervensystems, nicht näher bezeichnet;ZN;EN1/EN2;SC/ST1/SP5/SP6;Therapie
+G60.0;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Hereditäre sensomotorische Neuropathie;WS/EX/PN;SB2/EN3;SP3;Therapie
+G60.8;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Sonstige hereditäre und idiopathische Neuropathien;EX/CS/PN/SO4;SB1/SB2/EN3;SP3;Therapie
+G61.0;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Guillain-Barré-Syndrom;PN;EN3;SP3;Therapie
+G61.8;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Sonstige Polyneuritiden;PN;EN3;SP3;nur chronisch in?ammatorische demyelinisierende
+G70.0;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Myasthenia gravis;ZN;EN1/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G70.2;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Angeborene oder entwicklungsbedingte Myasthenie;PN/AT;EN3/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G71.0-;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Muskeldystrophie;ZN/AT;EN2/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G71.1;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Myotone Syndrome;PN/AT;EN3/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G71.2;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Angeborene Myopathien;WS/EX/PN/AT;EN3/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G71.3;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Mitochondriale Myopathie, anderenorts nicht klassifiziert;ZN/PN;EN1/EN3/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G72.3;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Periodische Lähmung;PN/AT;EN3/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G72.4;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Entzündliche Myopathie, anderenorts nicht klassifiziert;PN/AT;EN3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G73.6*;;Polyneuropathien und sonstige Krankheiten des peripheren Nervensystems: Myopathie bei Sto?wechselerkrankungen;PN;EN3/SB3;SC/SP6;Polyradikuloneuropathie (CIDP)
+G80.0;;Infantile Zerebralparese: Spastische tetraplegische Zerebralparese;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G80.1;;Infantile Zerebralparese: Spastische diplegische Zerebralparese;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G80.2;;Infantile Zerebralparese: Infantile hemiplegische Zerebralparese;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G80.3;;Infantile Zerebralparese: Dyskinetische Zerebralparese;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G80.4;;Infantile Zerebralparese: Ataktische Zerebralparese;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G80.8;;Infantile Zerebralparese: Sonstige infantile Zerebralparese;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G80.9;;Infantile Zerebralparese: Infantile Zerebralparese, nicht näher bezeichnet;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G81.0;;Hemiparese und Hemiplegie: Schla?e Hemiparese und Hemiplegie;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G81.1;;Hemiparese und Hemiplegie: Spastische Hemiparese und Hemiplegie;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G82.0-;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Schla?e Paraparese und Paraplegie;ZN;EN1/EN2;SP6/SC;Polyradikuloneuropathie (CIDP)
+G82.1-;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Spastische Paraparese und Paraplegie;ZN;EN1/EN2;SP6/SC;Polyradikuloneuropathie (CIDP)
+G82.2-;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Paraparese und Paraplegie, nicht näher bezeichnet;ZN;EN1/EN2;SP6/SC;Polyradikuloneuropathie (CIDP)
+G82.3-;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Schla?e Tetraparese und Tetraplegie;ZN;EN1/EN2;SP6/SC;Polyradikuloneuropathie (CIDP)
+G82.5-;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Tetraparese und Tetraplegie, nicht näher bezeichnet;ZN;EN1/EN2;SP6/SC;Polyradikuloneuropathie (CIDP)
+G91.2-;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Normaldruckhydrozephalus;ZN;EN1;SP6/SC;Polyradikuloneuropathie (CIDP)
+G93.1;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Anoxische Hirnschädigung, anderenorts nicht klassifiziert;ZN;EN1;SC;Wachkoma (apallisches Syndrom, auch infolge Hypoxie)
+G93.80;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Apallisches Syndrom;ZN;EN1;SC;Wachkoma (apallisches Syndrom, auch infolge Hypoxie)
+G95.0;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Syringomyelie und Syringobulbie;ZN;EN1/EN2;SC;Wachkoma (apallisches Syndrom, auch infolge Hypoxie)
+I60.0;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung: Subarachnoidalblutung, vom Karotissiphon oder der Karotisbifurkation ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.1;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von der A. cerebri media ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.2;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von der A. communicans anterior ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.3;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von der A. communicans posterior ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.4;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von der A. basilaris ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.5;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von der A. vertebralis ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.6;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von sonstigen intrakraniellen Arterien ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.7;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, von nicht näher bezeichneter intrakranieller Arterie ausgehend;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.8;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Sonstige Subarachnoidalblutung;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I60.9;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Subarachnoidalblutung, nicht näher bezeichnet;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.0;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale Blutung: Intrazerebrale Blutung in die Großhirnhemisphäre, subkortikal;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.1;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale Blutung in die Großhirnhemisphäre, kortikal;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.2;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale Blutung in die Großhirnhemisphäre, nicht näher bezeichnet;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.3;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale Blutung in den Hirnstamm;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.4;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale Blutung in das Kleinhirn;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.5;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale intraventrikuläre Blutung;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.6;;Paraparese und Paraplegie, Tetraparese und Tetraplegie: Intrazerebrale Blutung an mehreren;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.8;;Lokalisationen Sonstige intrazerebrale Blutung;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I61.9;;Lokalisationen Intrazerebrale Blutung, nicht näher bezeichnet;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.0;;Lokalisationen Hirninfarkt: Hirninfarkt durch Thrombose präzerebraler Arterien;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.1;;Lokalisationen Hirninfarkt durch Embolie präzerebraler Arterien;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.2;;Lokalisationen Hirninfarkt durch nicht näher bezeichneten Verschluss oder Stenose präzerebraler Arterien;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.3;;Lokalisationen Hirninfarkt durch Thrombose zerebraler;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.4;;Arterien Hirninfarkt durch Embolie zerebraler Arterien;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.5;;Arterien Hirninfarkt durch nicht näher bezeichneten Verschluss oder Stenose zerebraler Arterien;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.6;;Arterien Hirninfarkt durch Thrombose der Hirnvenen, nichteitrig;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.8;;Arterien Sonstiger Hirninfarkt;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I63.9;;Arterien Hirninfarkt, nicht näher bezeichnet;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I64;;Arterien Schlaganfall, nicht als Blutung oder Infarkt bezeichnet;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I69.0;;Arterien Folgen einer zerebrovaskulären Krankheit: Folgen einer Subarachnoidalblutung;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I69.1;;Arterien Folgen einer intrazerebralen Blutung;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I69.2;;Arterien Folgen einer sonstigen nichttraumatischen intrakraniellen Blutung;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I69.3;;Arterien Folgen eines Hirninfarktes;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I69.4;;Arterien Folgen eines Schlaganfalls, nicht als Blutung oder Infarkt bezeichnet;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+I69.8;;Arterien Folgen sonstiger und nicht näher bezeichneter zerebrovaskulärer Krankheiten;ZN;EN1;SC/SP5/SP6/ST1;längstens 1 Jahr nach Akutereignis
+Q01.0;;Arterien Enzephalozele: Frontale Enzephalozele;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q01.1;;Arterien Nasofrontale Enzephalozele;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q01.2;;Arterien Okzipitale Enzephalozele;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q01.8;;Arterien Enzephalozele sonstiger Lokalisationen;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q01.9;;Arterien Enzephalozele, nicht näher bezeichnet;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q03.0;;Angeborener Hydrozephalus: Fehlbildungen des Aquaeductus cerebri;SO1/SO3;EN1;SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q03.1;;Angeborener Hydrozephalus: Atresie der Apertura mediana [Foramen Magendii] oder der Aperturae laterales;SO1/SO3;EN1;SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q03.8;;[Foramina Luschkae] des vierten Ventrikels Sonstiger angeborener Hydrozephalus;SO1/SO3;EN1;SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q03.9;;[Foramina Luschkae] des vierten Ventrikels Angeborener Hydrozephalus, nicht näher bezeichnet;SO1/SO3;EN1;SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.0;;Sonstige angeborene Fehlbildungen des Gehirns: Angeborene Fehlbildungen des Corpus callosum;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.1;;Sonstige angeborene Fehlbildungen des Gehirns: Arrhinenzephalie;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.2;;Sonstige angeborene Fehlbildungen des Gehirns: Holoprosenzephalie-Syndrom;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.3;;Sonstige angeborene Fehlbildungen des Gehirns: Sonstige Reduktionsdeformitäten des;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.4;;Gehirns Septooptische Dysplasie;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.5;;Gehirns Megalenzephalie;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.6;;Gehirns Angeborene Gehirnzysten;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.8;;Gehirns Sonstige näher bezeichnete angeborene Fehlbildungen des Gehirns;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q04.9;;Gehirns Angeborene Fehlbildung des Gehirns, nicht näher bezeichnet;ZN/AT/SO1/SO3;EN1;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.0;;Gehirns Spina bi?da: Zervikale Spina bi?da mit Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.1;;Gehirns Thorakale Spina bi?da mit Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.2;;Gehirns Lumbale Spina bi?da mit Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.4;;Gehirns Nicht näher bezeichnete Spina bi?da mit Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.5;;Gehirns Zervikale Spina bi?da ohne Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.6;;Gehirns Thorakale Spina bi?da ohne Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.7;;Gehirns Lumbale Spina bi?da ohne Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.8;;Gehirns Sakrale Spina bi?da ohne Hydrozephalus;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q05.9;;Gehirns Spina bi?da, nicht näher bezeichnet;ZN/AT/SO1/SO3;EN1/EN2;SC/SP1/SP5/SP6;längstens 1 Jahr nach Akutereignis
+Q06.0;;Sonstige angeborene Fehlbildungen des Rückenmarkes: Amyelie;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+Q06.1;;Sonstige angeborene Fehlbildungen des Rückenmarkes: Hypoplasie und Dysplasie des Rückenmarkes;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+Q06.2;;Sonstige angeborene Fehlbildungen des Rückenmarkes: Diastematomyelie;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+Q06.3;;Sonstige angeborene Fehlbildungen des Rückenmarkes: Sonstige angeborene Fehlbildungen der Cauda equina;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+Q06.4;;Sonstige angeborene Fehlbildungen des Rückenmarkes: Hydromyelie;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+Q06.8;;Sonstige angeborene Fehlbildungen des Rückenmarkes: Sonstige näher bezeichnete angeborene;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+Q06.9;;Fehlbildungen des Rückenmarkes Angeborene Fehlbildung des Rückenmarkes, nicht näher bezeichnet;SO3;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.0;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Kontusion und Ödem des zervikalen Rückenmarkes;ZN/AT;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.1-;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Sonstige und nicht näher bezeichnete Verletzungen des zervikalen Rückenmarkes;ZN/AT;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.2;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Verletzung von Nervenwurzeln der Halswirbelsäule;ZN/AT;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.3;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Verletzung des Plexus brachialis Verletzung peripherer Nerven des Halses;ZN/AT;EN1/EN2/EN3;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.4;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Verletzung des Plexus brachialis Verletzung peripherer Nerven des Halses;ZN/AT;EN1/EN2/EN3;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.5;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Verletzung zervikaler sympathischer Nerven Verletzung sonstiger und nicht näher bezeichneter Nerven des Halses;ZN/AT;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S14.6;;Verletzungen der Nerven und des Rückenmarkes in Halshöhe: Verletzung zervikaler sympathischer Nerven Verletzung sonstiger und nicht näher bezeichneter Nerven des Halses;ZN/AT;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.0;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Kontusion und Ödem des thorakalen Rückenmarkes;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.1-;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Sonstige und nicht näher bezeichnete Verletzungen des thorakalen Rückenmarkes;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.2;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Verletzung von Nervenwurzeln der Brustwirbelsäule;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.3;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Verletzung peripherer Nerven des Thorax;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.4;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Verletzung thorakaler sympathischer Nerven;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.5;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Verletzung sonstiger Nerven des Thorax;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S24.6;;Verletzungen der Nerven und des Rückenmarkes in Thoraxhöhe: Verletzung eines nicht näher bezeichneten Nervs des Thorax;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.0;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Kontusion und Ödem des lumbalen Rückenmarkes [Conus medullaris];ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.1-;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Sonstige Verletzung des lumbalen Rückenmarkes;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.2;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Verletzung von Nervenwurzeln der Lendenwirbelsäule und des Kreuzbeins;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.3-;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Verletzung der Cauda equina;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.4;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Verletzung des Plexus lumbosacralis;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.5;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Verletzung sympathischer Nerven der Lendenwirbel-, Kreuzbein- und Beckenregion;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.6;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Verletzung eines oder mehrerer peripherer Nerven des Abdomens, der Lumbosakralgegend und des Beckens;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+S34.8;;Verletzung der Nerven und des lumbalen Rückenmarkes in Höhe des Abdomens, der Lumbosakralgegend und des Beckens: Verletzung sonstiger und nicht näher bezeichneter Nerven in Höhe des Abdomens, der Lumbosakralgegend und des;ZN;EN1/EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+T09.3;;Beckens Verletzung des Rückenmarkes, Höhe nicht näher bezeichnet;ZN/AT;EN2;SC/SP1/SP6;längstens 1 Jahr nach Akutereignis
+T90.5;;Beckens Folgen einer intrakraniellen Verletzung;ZN/AT/SO3;EN1;SC/SP5SP6;Folgen einer Verletzung, die unter
+M40.0-;;Beckens Kyphose als Haltungsstörung Sonstige sekundäre Kyphose;WS;EN1;SC/SP5SP6;ab Gesamtkyphosewinkel über 60° bei Erwachsenen
+M40.1-;;Beckens Kyphose als Haltungsstörung Sonstige sekundäre Kyphose;WS;EN1;SC/SP5SP6;ab Gesamtkyphosewinkel über 60° bei Erwachsenen
+M41.0-;;Beckens Idiopathische Skoliose beim Kind Idiopathische Skoliose beim Jugendlichen;WS/EX;SB1;SC/SP5SP6;Skoliose über 20° nach Cobb bei Kindern bis zum vollendeten 18. Lebensjahr
+M41.1-;;Beckens Idiopathische Skoliose beim Kind Idiopathische Skoliose beim Jugendlichen;WS/EX;SB1;SC/SP5SP6;Skoliose über 20° nach Cobb bei Kindern bis zum vollendeten 18. Lebensjahr
+M41.2-;;Beckens Sonstige idiopathische Skoliose Sonstige sekundäre Skoliose;WS/AT;SB1;SC/SP5SP6;ab 50° nach Cobb bei Erwachsenen
+M41.5-;;Beckens Sonstige idiopathische Skoliose Sonstige sekundäre Skoliose;WS/AT;SB1;SC/SP5SP6;ab 50° nach Cobb bei Erwachsenen
+M42.04;;Beckens Juvenile Osteochondrose der Wirbelsäule (Thorakalbereich) Juvenile Osteochondrose der Wirbelsäule (Thorakolumbalbereich);WS;SB1;SC/SP5SP6;fixierte Kyphose ab Gesamtkyphosewinkel über 40° bei Kindern bis zum vollendeten 18. Lebensjahr
+M42.05;;Beckens Juvenile Osteochondrose der Wirbelsäule (Thorakalbereich) Juvenile Osteochondrose der Wirbelsäule (Thorakolumbalbereich);WS;SB1;SC/SP5SP6;fixierte Kyphose ab Gesamtkyphosewinkel über 40° bei Kindern bis zum vollendeten 18. Lebensjahr
+M47.0-;G99.2;Beckens Arteria-spinalis-anterior-Kompressionssyndrom und Arteria-vertebralis-Kompressionssyndrom mit Myelopathie;WS/EX/ZN;EN2;SC/SP5SP6;längstens 6 Monate nach Akutereignis
+M47.1-;G99.2;Beckens Sonstige Spondylose mit Myelopathie Sonstige Spondylose mit Radikulopathie Spondylose, nicht näher bezeichnet mit Myelopathie Spondylose, nicht näher bezeichnet mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M47.2-;G55.2;Beckens Sonstige Spondylose mit Myelopathie Sonstige Spondylose mit Radikulopathie Spondylose, nicht näher bezeichnet mit Myelopathie Spondylose, nicht näher bezeichnet mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M47.9-;G99.2;Beckens Sonstige Spondylose mit Myelopathie Sonstige Spondylose mit Radikulopathie Spondylose, nicht näher bezeichnet mit Myelopathie Spondylose, nicht näher bezeichnet mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M47.9-;G55.2;Beckens Sonstige Spondylose mit Myelopathie Sonstige Spondylose mit Radikulopathie Spondylose, nicht näher bezeichnet mit Myelopathie Spondylose, nicht näher bezeichnet mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M48.0-;G55.3;Beckens Spinalkanalstenose mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M50.0;G99.2;Beckens Zervikaler Bandscheibenschaden mit Myelopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M50.1;G55.1;Beckens Zervikaler Bandscheibenschaden mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M51.0;G99.2;Beckens Lumbale und sonstige Bandscheibenschäden mit Myelopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M51.1;G55.1;Beckens Lumbale und sonstige Bandscheibenschäden mit Radikulopathie;WS/EX/ZN;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M75.1;;Schulterläsionen: Läsionen der Rotatorenmanschette;EX;EN2;SC/SP5SP6;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+M89.0-;;Sonstige Osteopathien: Neurodystrophie [Algodystrophie] Komplexes regionales Schmerzsyndrom, Typ I;EX/LY/PN;SB2;SC/SP5SP6;längstens 1 Jahr nach Akutereignis
+G90.5-;;Sonstige Osteopathien: Neurodystrophie [Algodystrophie] Komplexes regionales Schmerzsyndrom, Typ I;EX/LY/PN;SB2;SC/SP5SP6;längstens 1 Jahr nach Akutereignis
+G90.6-;;Sonstige Osteopathien: Komplexes regionales Schmerzsyndrom, Typ II;EX/LY/PN;SB2;SC/SP5SP6;längstens 1 Jahr nach Akutereignis
+G90.7-;;Sonstige Osteopathien: Komplexes regionales Schmerzsyndrom, sonstiger und nicht näher bezeichneter;EX/LY/PN;SB2;SC/SP5SP6;längstens 1 Jahr nach Akutereignis
+Z89.1;;Typ Verlust von oberen und unteren Extremitäten Einseitiger Verlust der Hand und des;EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+Z89.2;;Handgelenks Einseitiger Verlust der oberen Extremität (oberhalb des Handgelenkes);EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+Z89.5;;Handgelenks Einseitiger Verlust der unteren Extremität unterhalb oder bis zum Knie;EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+Z89.6;;Handgelenks Einseitiger Verlust der unteren Extremität;EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+Z89.3;;(oberhalb des Knies) Beidseitiger (teilweiser) Verlust der oberen Extremitäten;EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+Z89.7;;(oberhalb des Knies) Beidseitiger (teilweiser) Verlust der unteren Extremitäten;EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+Z89.8;;(oberhalb des Knies) Verlust der oberen und unteren Extremitäten [jede Höhe];EX/WS/CS/LY;SB2;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M05.0-;;Seropositive chronische Polyarthritis: Felty-Syndrom;WS/EX/AT;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M05.1-;;Seropositive chronische Polyarthritis: Lungenmanifestation der seropositiven chronischen Polyarthritis;WS/EX/AT;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M05.2-;;Seropositive chronische Polyarthritis: Vaskulitis bei seropositiver chronischer Polyarthritis;WS/EX/AT;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M05.3-;;Seropositive chronische Polyarthritis: Seropositive chronische Polyarthritis mit;WS/EX/AT;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M05.8-;;Beteiligung sonstiger Organe und Organsysteme Sonstige seropositive chronische Polyarthritis;WS/EX/AT;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M05.9-;;Beteiligung sonstiger Organe und Organsysteme Seropositive chronische Polyarthritis, nicht näher bezeichnet;WS/EX/AT;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M06.0-;;Beteiligung sonstiger Organe und Organsysteme Seronegative chronische Polyarthritis;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M06.1-;;Beteiligung sonstiger Organe und Organsysteme Adulte Form der Still-Krankheit;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.0-;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Distale interphalangeale Arthritis psoriatica;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.1-;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Arthritis multilans;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.2;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Spondylitis psoriatica;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.3-;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Sonstige psoriatische Arthritiden;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.4-;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Arthritis bei Crohn-Krankheit [Enteritis regionalis];WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.5-;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Arthritis bei Colitis ulcerosa;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M07.6-;;Arthritis psoriatica und Arthritiden bei gastrointestinalen Grundkrankheiten: Sonstige Arthritiden bei gastrointestinalen Grundkrankheiten;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.0-;;Juvenile Arthritis: Juvenile chronische Polyarthritis, adulter Typ;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.1-;;Juvenile Arthritis: Juvenile Spondylitis ankylosans;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.2-;;Juvenile Arthritis: Juvenile chronische Arthritis, systemisch beginnende Form;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.3;;Juvenile Arthritis: Juvenile chronische Arthritis (seronegativ), polyartikuläre Form;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.4-;;Juvenile Arthritis: Juvenile chronische Arthritis, oligoartikuläre Form;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.7-;;Juvenile Arthritis: Vaskulitis bei juveniler Arthritis;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.8-;;Juvenile Arthritis: Sonstige juvenile Arthritis;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M08.9-;;Juvenile Arthritis: Juvenile Arthritis, nicht näher bezeichnet;WS/EX;SB1;SC/SP5SP6;längstens 12 Monate nach Akutereignis
+M30.0;;Juvenile Arthritis: Panarteriitis nodosa Granulomatose mit Polyangiitis*;EX/ZN/PN;EN1/SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M31.3;;Juvenile Arthritis: Panarteriitis nodosa Granulomatose mit Polyangiitis*;EX/ZN/PN;EN1/SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M32.1;;Juvenile Arthritis: Systemischer Lupus erythematodes mit;EX/WS/;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M32.8;;Beteiligung von Organen oder Organsystemen Sonstige Formen des systemischen Lupus erythematodes;AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M33.0;;Beteiligung von Organen oder Organsystemen Juvenile Dermatomyositis;EX/ZN/PN;EN1/SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M33.1;;Beteiligung von Organen oder Organsystemen Sonstige Dermatomyositis;EX/ZN/PN;EN1/SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M33.2;;Beteiligung von Organen oder Organsystemen Polymyositis;EX/ZN/PN;EN1/SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M34.0;;Beteiligung von Organen oder Organsystemen Systemische Sklerose: Progressive systemische Sklerose;WS/EX/AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M34.1;;Beteiligung von Organen oder Organsystemen CR(E)ST-Syndrom;WS/EX/AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M34.2;;Beteiligung von Organen oder Organsystemen Systemische Sklerose, durch Arzneimittel oder chemische Substanzen induziert;WS/EX/AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M34.8;;Beteiligung von Organen oder Organsystemen Sonstige Formen der systemischen Sklerose;WS/EX/AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M34.9;;Beteiligung von Organen oder Organsystemen Systemische Sklerose, nicht näher bezeichnet;WS/EX/AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+M36.2;;Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krankheiten Arthropathia haemophilica;EX/CS;SB1;SC;längstens 12 Monate nach Akutereignis
+M45.0-;;Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krankheiten Spondylitis ankylosans;WS/EX;SB1;SC;längstens 12 Monate nach Akutereignis
+Q79.6;;Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krankheiten Ehlers-Danlos-Syndrom;WS/EX/CS;SB1/SB2;SC;längstens 12 Monate nach Akutereignis
+Q87.4;;Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krankheiten Marfan-Syndrom;WS/EX/AT;SB1/SB3;SC;längstens 12 Monate nach Akutereignis
+Q66.0;;Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krankheiten Pes equinovarus congenitus (Klumpfuß);EX;SB2;SC;längstens 12 Monate nach Akutereignis
+Q68.0;;Systemkrankheiten des Bindegewebes bei anderenorts klassifizierten Krankheiten Angeborene Deformitäten des M. sternocleidomastoideus;EX;SB3;SC;längstens 12 Monate nach Akutereignis
+Q71.0;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes vollständiges Fehlen der oberen Extremität(en);SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.1;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes Fehlen des Ober- und Unterarmes bei vorhandener Hand;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.2;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes Fehlen sowohl des Unterarmes als auch der Hand;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.3;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes Fehlen der Hand oder eines oder mehrerer Finger;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.4;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Longitudinaler Reduktionsdefekt des Radius;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.5;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Longitudinaler Reduktionsdefekt der Ulna;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.6;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Spalthand;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.8;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Sonstige Reduktionsdefekte der oberen Extremität(en);SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q71.9;;Reduktionsdefekte der oberen Extremität (insbesondere in Folge von Contergan- Schädigungen): Reduktionsdefekt der oberen Extremität, nicht näher bezeichnet;SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+SO1/SO2/;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen):;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+SO3/SO4;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen):;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.0;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes vollständiges Fehlen der unteren Extremität(en);CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.1;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes Fehlen des Ober- und Unterschenkels bei vorhandenem Fuß;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.2;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes Fehlen sowohl des Unterschenkels als auch des Fußes;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.3;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Angeborenes Fehlen des Fußes oder einer oder mehrerer Zehen;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.4;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Longitudinaler Reduktionsdefekt des Femurs;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.5;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Longitudinaler Reduktionsdefekt der Tibia;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.6;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Longitudinaler Reduktionsdefekt der Fibula;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.7;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Spaltfuß;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.8;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Sonstige Reduktionsdefekte der unteren Extremität(en);CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q72.9;;Reduktionsdefekte der unteren Extremität (insbesondere in Folge von Contergan- Schädigungen): Reduktionsdefekt der unteren Extremität, nicht näher bezeichnet;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q73.0;;Reduktionsdefekte nicht näher bezeichneter Extremitäten (insbesondere in Folge von Contergan-Schädigungen): Angeborenes Fehlen nicht näher bezeichneter Extremität(en);CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q73.1;;Reduktionsdefekte nicht näher bezeichneter Extremitäten (insbesondere in Folge von Contergan-Schädigungen): Phokomelie nicht näher bezeichneter;CS/AT/PN/WS/EX/ZN/GE/LY/;SB2;SC;längstens 12 Monate nach Akutereignis
+Q73.8;;Extremität(en) Sonstige Reduktionsdefekte nicht näher bezeichneter Extremität(en);CS/AT/PN/WS/EX/ZN/GE/LY/SO1/SO2/SO3/SO4;SB2;SC;längstens 12 Monate nach Akutereignis
+Q74.3;;Extremität(en) Arthrogryposis multiplex congenita;EX;SB1;SC;längstens 12 Monate nach Akutereignis
+Q78.0;;Extremität(en) Osteogenesis imperfecta;EX/WS;SB1;SC;längstens 12 Monate nach Akutereignis
+Q86.80;;Extremität(en) Thalidomid-Embryopathie;EX/WS;SB1;SP3/SP4/SP6;längstens 12 Monate nach Akutereignis
+Q87.0;;Extremität(en) Angeborene Fehlbildungssyndrome mit vorwiegender Beteiligung des Gesichtes;WS/EX;SB2;SP3/SF/SC;längstens 12 Monate nach Akutereignis
+Q87.2;;Extremität(en) Angeborene Fehlbildungssyndrome mit vorwiegender Beteiligung der Extremitäten;EX/CS/LY;SB1/SB2;SP3/SF/SC;längstens 12 Monate nach Akutereignis
+M23.5-;Z98.88;Extremität(en) Chronische Instabilität des Kniegelenks Habituelle Luxation und Subluxation;EX/LYEX;SB2SB2;SP3/SF/SC;längstens 6 Monate nach Akutereignis
+M24.41;Z98.88;Extremität(en) Chronische Instabilität des Kniegelenks Habituelle Luxation und Subluxation;EX/LYEX;SB2SB2;SP3/SF/SC;längstens 6 Monate nach Akutereignis
+Z96.60;Z98.88;eines Gelenkes: Schulterregion Vorhandensein einer Schulterprothese;EX;SB2;SP3/SF/SC;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+Z96.64;Z98.88;eines Gelenkes: Schulterregion Vorhandensein einer Hüftgelenkprothese Vorhandensein einer Kniegelenkprothese;EX/LY;SB2;SP3/SF/SC;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+Z96.65;Z98.88;eines Gelenkes: Schulterregion Vorhandensein einer Hüftgelenkprothese Vorhandensein einer Kniegelenkprothese;EX/LY;SB2;SP3/SF/SC;Voraussetzung für die Anerkennung als besonderer Verordnungsbedarf ist die Angabe beider ICD-10-Diagnoseschlüssel
+C00-;;eines Gelenkes: Schulterregion Bösartige Neubildungen;LY;SB2;SP3/SF/SC;bösartige Neubildungen nach
+C97;;eines Gelenkes: Schulterregion Bösartige Neubildungen;LY;SB2;SP3/SF/SC;bösartige Neubildungen nach
+I89.01;;eines Gelenkes: Schulterregion Lymphödem der oberen und unteren Extremität(en), Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I89.02;;eines Gelenkes: Schulterregion Lymphödem der oberen und unteren Extremität(en), Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I89.04;;eines Gelenkes: Schulterregion Lymphödem, sonstige Lokalisation, Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I89.05;;eines Gelenkes: Schulterregion Lymphödem, sonstige Lokalisation, Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I97.21;;eines Gelenkes: Schulterregion Lymphödem nach (partieller) Mastektomie (mit Lymphadenektomie), Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I97.22;;eines Gelenkes: Schulterregion Lymphödem nach (partieller) Mastektomie (mit Lymphadenektomie), Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I97.82;;eines Gelenkes: Schulterregion Lymphödem nach medizinischen Maßnahmen am axillären Lymphab?ussgebiet, Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I97.83;;eines Gelenkes: Schulterregion Lymphödem nach medizinischen Maßnahmen am axillären Lymphab?ussgebiet, Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I97.85;;eines Gelenkes: Schulterregion Lymphödem nach medizinischen Maßnahmen am inguinalen Lymphab?ussgebiet, Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+I97.86;;eines Gelenkes: Schulterregion Lymphödem nach medizinischen Maßnahmen am inguinalen Lymphab?ussgebiet, Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q82.01;;eines Gelenkes: Schulterregion Hereditäres Lymphödem der oberen und unteren Extremität(en), Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q82.02;;eines Gelenkes: Schulterregion Hereditäres Lymphödem der oberen und unteren Extremität(en), Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q82.04;;eines Gelenkes: Schulterregion Hereditäres Lymphödem, sonstige Lokalisation, Stadium II;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q82.05;;eines Gelenkes: Schulterregion Hereditäres Lymphödem, sonstige Lokalisation, Stadium III;LY;SB2;SP3/SF/SC;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.0;;Gaumenspalte mit Lippenspalte: Spalte des harten Gaumens mit beidseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.1;;Gaumenspalte mit Lippenspalte: Spalte des harten Gaumens mit einseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.2;;Gaumenspalte mit Lippenspalte: Spalte des weichen Gaumens mit beidseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.3;;Gaumenspalte mit Lippenspalte: Spalte des weichen Gaumens mit einseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.4;;Gaumenspalte mit Lippenspalte: Spalte des harten und des weichen Gaumens mit beidseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.5;;Gaumenspalte mit Lippenspalte: Spalte des harten und des weichen Gaumens mit einseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.8;;Gaumenspalte mit Lippenspalte: Gaumenspalte, nicht näher bezeichnet, mit beidseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+Q37.9;;Gaumenspalte mit Lippenspalte: Gaumenspalte, nicht näher bezeichnet, mit einseitiger Lippenspalte;LY;SB2;SP3/SF;(weibliche, männli-che Genitalorgane, Harnorgane)
+F80.1;;Umschriebene Entwicklungsstörungen des Sprechens und der Sprache: Expressive Sprachstörung;LY;SB2;SP1/SP2;bis zum vollendeten 12. Lebensjahr
+F80.2-;;Umschriebene Entwicklungsstörungen des Sprechens und der Sprache: Rezeptive Sprachstörung;LY;SB2;SP1/SP2;bis zum vollendeten 12. Lebensjahr
+F83;;Umschriebene Entwicklungsstörungen des Sprechens und der Sprache: Kombinierte umschriebene Entwicklungsstörungen;ZN;EN1;SP1/SP2/SP3/SP6/RE2;bis zum vollendeten 18. Lebensjahr
+F84.0;;Tiefgreifende Entwicklungsstörungen: Frühkindlicher Autismus;ZN;EN1/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+F84.1;;Tiefgreifende Entwicklungsstörungen: Atypischer Autismus;ZN;EN1/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+F84.3;;Tiefgreifende Entwicklungsstörungen: Andere desintegrative Störung des Kindesalters;ZN;EN1/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+F84.4;;Tiefgreifende Entwicklungsstörungen: Überaktive Störung mit Intelligenzminderung und Bewegungsstereotypien;ZN;EN1/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+F84.5;;Tiefgreifende Entwicklungsstörungen: Asperger-Syndrom;ZN;EN1/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+F84.8;;Tiefgreifende Entwicklungsstörungen: Sonstige tief greifende Entwicklungsstörungen;ZN;EN1/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+F84.2;;Tiefgreifende Entwicklungsstörungen: Rett-Syndrom;ZN/WS/EX/AT;PS1/EN1/SB1/SB3;SP1/SC;bis zum vollendeten 18. Lebensjahr
+Q90.0;;Tiefgreifende Entwicklungsstörungen: Down-Syndrom: Trisomie 21, meiotische Non-disjunction;ZN;EN1;SP1/SP3/RE1/SC;bis zum vollendeten 18. Lebensjahr
+Q90.1;;Tiefgreifende Entwicklungsstörungen: Trisomie 21, Mosaik (mitotische Non-disjunction);ZN;EN1;SP1/SP3/RE1/SC;bis zum vollendeten 18. Lebensjahr
+Q90.2;;Tiefgreifende Entwicklungsstörungen: Trisomie 21, Translokation;ZN;EN1;SP1/SP3/RE1/SC;bis zum vollendeten 18. Lebensjahr
+Q90.9;;Tiefgreifende Entwicklungsstörungen: Down-Syndrom, nicht näher bezeichnet;ZN;EN1;SP1/SP3/RE1/SC;bis zum vollendeten 18. Lebensjahr
+Q91.0;;Edwards-Syndrom und Patau-Syndrom: Trisomie 18, meiotische Non-disjunction;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.1;;Edwards-Syndrom und Patau-Syndrom: Trisomie 18, Mosaik (mitotische Non-disjunction);ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.2;;Edwards-Syndrom und Patau-Syndrom: Trisomie 18, Translokation;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.3;;Edwards-Syndrom und Patau-Syndrom: Edwards-Syndrom, nicht näher bezeichnet;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.4;;Edwards-Syndrom und Patau-Syndrom: Trisomie 13, meiotische Non-disjunction;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.5;;Edwards-Syndrom und Patau-Syndrom: Trisomie 13, Mosaik (mitotische Non-disjunction);ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.6;;Edwards-Syndrom und Patau-Syndrom: Trisomie 13, Translokation;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q91.7;;Edwards-Syndrom und Patau-Syndrom: Patau-Syndrom, nicht näher bezeichnet;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q93.3;;Edwards-Syndrom und Patau-Syndrom: Deletion des kurzen Armes des Chromosoms 4 (Wolf-Hirschhorn-Syndrom);EX/WS;SB1/SB2;SP1;bis zum vollendeten 18. Lebensjahr
+Q93.4;;Edwards-Syndrom und Patau-Syndrom: Deletion des kurzen Armes des Chromosoms 5;WS/EX/ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q93.5;;Edwards-Syndrom und Patau-Syndrom: Sonstige Deletion eines Chromosomenteils (Angelmann-Syndrom);ZN/WS;EN1/SB1/SB2/PS1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.0;;Turner-Syndrom: Karyotyp 45,X;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.1;;Turner-Syndrom: Karyotyp 46,X iso (Xq);ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.2;;Turner-Syndrom: Karyotyp 46,X mit Gonosomenanomalie, ausgenommen iso (Xq);ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.3;;Turner-Syndrom: Mosaik, 45,X/46,XX oder 45,X/46,XY;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.4;;Turner-Syndrom: Mosaik, 45,X/sonstige Zelllinie(n) mit Gonosomenanomalie;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.8;;Turner-Syndrom: Sonstige Varianten des Turner-Syndroms;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q96.9;;Turner-Syndrom: Turner-Syndrom, nicht näher bezeichnet;ZN;EN1;SP1;bis zum vollendeten 18. Lebensjahr
+Q99.2;;Turner-Syndrom: Fragiles X-Chromosom;ZN/SO2;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+J44.00;;Chronische obstruktive Lungenkrankheiten: Chronische obstruktive Lungenkrankheit mit akuter Infektion der unteren Atemwege: FEV? < 35% des Sollwertes;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+J44.10;;Chronische obstruktive Lungenkrankheiten: Chronische obstruktive Lungenkrankheit mit akuter Exazerbation, nicht näher bezeichnet: FEV? < 35% des Sollwertes;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+J44.80;;Chronische obstruktive Lungenkrankheiten: Sonstige näher bezeichnete chronische obstruktive Lungenkrankheit: FEV? < 35% des Sollwertes;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+J44.90;;Chronische obstruktive Lungenkrankheiten: Chronische obstruktive Lungenkrankheit, nicht näher bezeichnet: FEV? < 35% des;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+J84.10;;Sollwertes Sonstige interstitielle Lungenkrankheiten mit Fibrose;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+J84.80;;Sollwertes Sonstige näher bezeichnete interstitielle;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+P27.1;;Sollwertes Bronchopulmonale Dysplasie mit Ursprung in der Perinatalperiode;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+P27.8;;Sollwertes Sonstige chronische Atemwegserkrankungen mit Ursprung in der Perinatalperiode;AT;EN1/SB3/PS1/PS2;SP1/SP3/SP5/SF/RE1/RE2;bis zum vollendeten 18. Lebensjahr
+E41;;Sollwertes Alimentärer Marasmus;AT;EN1/SB3/PS1/PS2;SC;ab vollendetem 70. Lebensjahr, sofern dieser durch Schluckstörungen verursacht ist
+F00.0;;Sollwertes Demenz bei Alzheimer-Krankheit mit frühem Beginn (Typ 2);AT;PS4;SC;ab vollendetem 70. Lebensjahr, sofern dieser durch Schluckstörungen verursacht ist
+F00.1;;Sollwertes Demenz bei Alzheimer-Krankheit, mit spätem Beginn (Typ 1);AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F00.2;;Sollwertes Demenz bei Alzheimer-Krankheit, atypische oder gemischte Form;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F01.0;;Sollwertes Vaskuläre Demenz mit akutem Beginn;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F01.1;;Sollwertes Multiinfarkt-Demenz;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F01.2;;Sollwertes Subkortikale vaskuläre Demenz;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F01.3;;Sollwertes Gemischte kortikale und subkortikale vaskuläre Demenz;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F01.8;;Sollwertes Sonstige vaskuläre Demenz;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F02.3;;Sollwertes Demenz bei primärem Parkinson-Syndrom;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F02.8;;Sollwertes Demenz bei anderenorts klassifizierten Krankheitsbildern;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F03;;Sollwertes Nicht näher bezeichnete Demenz;AT;PS4;SC;ab vollendetem 70. Lebensjahr
+F41.0;;Sollwertes Panikstörung [episodisch paroxysmale Angst];AT;PS2;SC;ab vollendetem 70. Lebensjahr
+F41.1;;Sollwertes Generalisierte Angststörung;AT;PS2;SC;ab vollendetem 70. Lebensjahr
+F41.2;;Sollwertes Angst und depressive Störung, gemischt;AT;PS2;SC;ab vollendetem 70. Lebensjahr
+F41.3;;Sollwertes Andere gemischte Angststörungen;AT;PS2;SC;ab vollendetem 70. Lebensjahr
+F41.8;;Sollwertes Sonstige spezifische Angststörungen;AT;PS2;SC;ab vollendetem 70. Lebensjahr
+F41.9;;Sollwertes Angststörung, nicht näher bezeichnet;AT;PS2;SC;ab vollendetem 70. Lebensjahr
+F45.40;;Sollwertes Anhaltende somatoforme Schmerzstörung Chronische Schmerzstörung mit somatischen und psychischen Faktoren;CS;PS2;SC;ab vollendetem 70. Lebensjahr
+F45.41;;Sollwertes Anhaltende somatoforme Schmerzstörung Chronische Schmerzstörung mit somatischen und psychischen Faktoren;CS;PS2;SC;ab vollendetem 70. Lebensjahr
+G54.6;;Sollwertes Phantomschmerz;CS;PS2;SC;ab vollendetem 70. Lebensjahr
+H81.-;;Sollwertes Störungen der Vestibularfunktion Schwindelsyndrome bei anderenorts klassifizierten Krankheiten;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+H82;;Sollwertes Störungen der Vestibularfunktion Schwindelsyndrome bei anderenorts klassifizierten Krankheiten;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+N39.3;;Sollwertes Belastungsinkontinenz [Stressinkontinenz] Sonstige näher bezeichnete Harninkontinenz;SO2;PS2;SC;ab vollendetem 70. Lebensjahr
+N39.4-;;Sollwertes Belastungsinkontinenz [Stressinkontinenz] Sonstige näher bezeichnete Harninkontinenz;SO2;PS2;SC;ab vollendetem 70. Lebensjahr
+R13.-;;Sollwertes Dysphagie;SO2;PS2;SC;ab vollendetem 70. Lebensjahr
+R15;;Sollwertes Stuhlinkontinenz;SO2;PS2;SC;ab vollendetem 70. Lebensjahr
+R26.0;;Sollwertes Ataktischer Gang;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+R26.1;;Sollwertes Paretischer Gang;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+R26.2;;Sollwertes Gehbeschwerden, anderenorts nicht klassifiziert;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+R29.6;;Sollwertes Sturzneigung, anderenorts nicht klassi- ?ziert;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+R32;;Sollwertes Nicht näher bezeichnete Harninkontinenz;SO2;PS2;SC;ab vollendetem 70. Lebensjahr
+R42;;Sollwertes Schwindel und Taumel;WS/EX/SO3;PS2;SC;ab vollendetem 70. Lebensjahr
+R52.1;;Sollwertes Chronischer unbeein?ussbarer Schmerz Sonstiger chronischer Schmerz;CS;PS2;SC;ab vollendetem 70. Lebensjahr
+R52.2;;Sollwertes Chronischer unbeein?ussbarer Schmerz Sonstiger chronischer Schmerz;CS;PS2;SC;ab vollendetem 70. Lebensjahr
+R64;;Sollwertes Kachexie;CS;PS2;SC;ab vollendetem 70. Lebensjahr
+M80.0-;;Sollwertes Postmenopausale Osteoporose mit pathologischer Fraktur;WS/EX;PS2;SC;ab vollendetem 70. Lebensjahr
+M80.2-;;Sollwertes Inaktivitätsosteoporose mit pathologischer Fraktur;WS/EX;PS2;SC;ab vollendetem 70. Lebensjahr
+M80.3-;;Sollwertes Osteoporose mit pathologischer Fraktur infolge Malabsorption nach chirurgischem Eingri?;WS/EX;PS2;SC;längstens 6 Monate nach Akutereignis
+M80.5-;;Sollwertes Idiopathische Osteoporose mit pathologischer Fraktur;WS/EX;PS2;SC;längstens 6 Monate nach Akutereignis
+M80.8-;;Sollwertes Sonstige Osteoporose mit pathologischer Fraktur;WS/EX;PS2;SC;längstens 6 Monate nach Akutereignis
+E74.0;;Sollwertes Glykogenspeicherkrankheiten [Glykogenose] GM2-Gangliosidose Mukopolysaccharidose, Typ I;ZN/PN/AT/WS/EX/CS/SO1;EN1/SB1/SB3;SC;längstens 6 Monate nach Akutereignis
+E75.0;;Sollwertes Glykogenspeicherkrankheiten [Glykogenose] GM2-Gangliosidose Mukopolysaccharidose, Typ I;ZN/PN/AT/WS/EX/CS/SO1;EN1/SB1/SB3;SC;längstens 6 Monate nach Akutereignis
+E76.0;;Sollwertes Glykogenspeicherkrankheiten [Glykogenose] GM2-Gangliosidose Mukopolysaccharidose, Typ I;ZN/PN/AT/WS/EX/CS/SO1;EN1/SB1/SB3;SC;längstens 6 Monate nach Akutereignis
+E88.20;;Sollwertes Lipödem, Stadium I Lipödem, Stadium II Lipödem, Stadium III;LY;EN1/SB1/SB3;SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+E88.21;;Sollwertes Lipödem, Stadium I Lipödem, Stadium II Lipödem, Stadium III;LY;EN1/SB1/SB3;SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+E88.22;;Sollwertes Lipödem, Stadium I Lipödem, Stadium II Lipödem, Stadium III;LY;EN1/SB1/SB3;SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+E84.-;;Sollwertes Zystische Fibrose (Mukoviszidose);AT;CF;SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+U09.9;;Sollwertes Post-COVID Syndrom;WS/AT;SB1/PS2/PS3;SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T20.3;;Sollwertes Verbrennung 3. Grades des Kopfes und des Halses;LY/CS/EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T20.7;;Sollwertes Verätzung 3. Grades des Kopfes und des Halses;LY/CS/EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T21.3-;;Sollwertes Verbrennung 3. Grades des Rumpfes;LY/CS/;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T21.7-;;Sollwertes Verätzung 3. Grades des Rumpfes;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T22.3-;;Sollwertes Verbrennung 3. Grades der Schulter und des Armes, ausgenommen Handgelenk und Hand;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T22.7-;;Sollwertes Verätzung 3. Grades der Schulter und des Armes, ausgenommen Handgelenk und Hand;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T23.3;;Sollwertes Verbrennung 3. Grades des Handgelenkes und der Hand;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T23.7;;Sollwertes Verätzung 3. Grades des Handgelenkes und der Hand;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T24.3;;Sollwertes Verbrennung 3. Grades der Hüfte und des Beines, ausgenommen Knöchelregion und Fuß;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T24.7;;Sollwertes Verätzung 3. Grades der Hüfte und des;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T25.3;;Beines, ausgenommen Knöchelregion und Fuß Verbrennung 3. Grades der Knöchelregion und des Fußes;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T25.7;;Beines, ausgenommen Knöchelregion und Fuß Verätzung 3. Grades der Knöchelregion und des Fußes;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T29.3;;Beines, ausgenommen Knöchelregion und Fuß Verbrennungen mehrerer Körperregionen, wobei mindestens eine Verbrennung 3. Grades angegeben ist;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+T29.7;;Beines, ausgenommen Knöchelregion und Fuß Verätzungen mehrerer Körperregionen, wobei mindestens eine Verätzung 3.;EX/WS;SB2;ST1/SP6/SC;"nur im Zusammenhang mit komplexer physikalischer Entstauungstherapie (Manuelle Lymphdrainage, Kompressions-therapie, Übungs-behandlung/Be-wegungstherapie und Hautp?ege); es sind nicht immer alle Komponenten zeitgleich erforderlich !!! befristet bis 31.12.2027 !!!"
+Z99.0;Z43.0;Grades angegeben ist Abhängigkeit (langzeit) vom Aspirator i.V.m. Versorgung eines Tracheostomas;EX/ZN/PN/AT/LY;EN1/EN2/EN3/SB1/SB2;SC/ST1;Unter Einbindung der Ärztinnen und Ärzte, die die medizinische
+Z99.1;;Grades angegeben ist Abhängigkeit (langzeitig) vom Respirator;EX/ZN/PN/AT/LY;EN1/EN2/EN3/SB1/SB2;SC/ST1;Intensivp?ege koordinieren
