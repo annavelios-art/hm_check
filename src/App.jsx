@@ -12,6 +12,9 @@ import {
   Info,
   RotateCcw,
   Loader2,
+  Activity,
+  Plus,
+  Trash2,
 } from 'lucide-react'
 import { checkPrescription, loadCsvData } from './lib/checkPrescription'
 
@@ -44,13 +47,21 @@ const FREQUENCIES = [
   '4x wöchentlich',
 ]
 
+const LEITSYMPTOMATIK_OPTIONS = [
+  { value: 'a', label: 'a' },
+  { value: 'b', label: 'b' },
+  { value: 'c', label: 'c' },
+  { value: 'x', label: 'x (patientenindividuelle Leitsymptomatik)' },
+]
+
 export default function App() {
   const [formData, setFormData] = useState({
     issueDate: '',
     diagnosisGroup: '',
+    leitsymptomatik: [],
     remedy: '',
     units: '',
-    icd10: '',
+    icd10Codes: [''],
     frequency: '',
   })
 
@@ -76,6 +87,61 @@ export default function App() {
     if (result) setResult(null)
   }
 
+  const toggleLeitsymptomatik = value => {
+    setFormData(prev => {
+      const alreadySelected = prev.leitsymptomatik.includes(value)
+
+      return {
+        ...prev,
+        leitsymptomatik: alreadySelected
+          ? prev.leitsymptomatik.filter(item => item !== value)
+          : [...prev.leitsymptomatik, value],
+      }
+    })
+
+    if (result) setResult(null)
+  }
+
+  const updateIcd10Code = (index, value) => {
+    setFormData(prev => {
+      const nextCodes = [...prev.icd10Codes]
+      nextCodes[index] = value.toUpperCase()
+
+      return {
+        ...prev,
+        icd10Codes: nextCodes,
+      }
+    })
+
+    if (result) setResult(null)
+  }
+
+  const addIcd10Code = () => {
+    setFormData(prev => {
+      if (prev.icd10Codes.length >= 2) return prev
+
+      return {
+        ...prev,
+        icd10Codes: [...prev.icd10Codes, ''],
+      }
+    })
+
+    if (result) setResult(null)
+  }
+
+  const removeIcd10Code = index => {
+    setFormData(prev => {
+      if (prev.icd10Codes.length <= 1) return prev
+
+      return {
+        ...prev,
+        icd10Codes: prev.icd10Codes.filter((_, itemIndex) => itemIndex !== index),
+      }
+    })
+
+    if (result) setResult(null)
+  }
+
   const handleCheck = () => {
     const checkResult = checkPrescription(formData, csvData)
     setResult(checkResult)
@@ -92,9 +158,10 @@ export default function App() {
     setFormData({
       issueDate: '',
       diagnosisGroup: '',
+      leitsymptomatik: [],
       remedy: '',
       units: '',
-      icd10: '',
+      icd10Codes: [''],
       frequency: '',
     })
     setResult(null)
@@ -158,6 +225,29 @@ export default function App() {
               </select>
             </Field>
 
+            <Field
+              label="Leitsymptomatik"
+              hint="Mehrfachauswahl möglich"
+              icon={<Activity className="w-4 h-4" />}
+            >
+              <div className="space-y-2">
+                {LEITSYMPTOMATIK_OPTIONS.map(option => (
+                  <label
+                    key={option.value}
+                    className="flex items-center gap-3 border border-slate-200 rounded-md px-3 py-2 bg-white"
+                  >
+                    <input
+                      type="checkbox"
+                      checked={formData.leitsymptomatik.includes(option.value)}
+                      onChange={() => toggleLeitsymptomatik(option.value)}
+                      className="w-5 h-5"
+                    />
+                    <span className="text-sm text-slate-800">{option.label}</span>
+                  </label>
+                ))}
+              </div>
+            </Field>
+
             <Field label="Heilmittel" icon={<Pill className="w-4 h-4" />}>
               <select
                 value={formData.remedy}
@@ -191,13 +281,41 @@ export default function App() {
                 </div>
 
                 <Field label="ICD-10 Code" icon={<FileText className="w-4 h-4" />}>
-                  <input
-                    type="text"
-                    value={formData.icd10}
-                    onChange={e => updateField('icd10', e.target.value.toUpperCase())}
-                    placeholder="z. B. M17.1"
-                    className="input uppercase"
-                  />
+                  <div className="space-y-3">
+                    {formData.icd10Codes.map((code, index) => (
+                      <div key={index} className="flex gap-2">
+                        <input
+                          type="text"
+                          value={code}
+                          onChange={e => updateIcd10Code(index, e.target.value)}
+                          placeholder={index === 0 ? 'z. B. M17.1' : 'weiterer ICD-10-Code'}
+                          className="input uppercase flex-1"
+                        />
+
+                        {formData.icd10Codes.length > 1 && (
+                          <button
+                            type="button"
+                            onClick={() => removeIcd10Code(index)}
+                            className="bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-md px-3"
+                            title="ICD-10-Code entfernen"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        )}
+                      </div>
+                    ))}
+
+                    {formData.icd10Codes.length < 2 && (
+                      <button
+                        type="button"
+                        onClick={addIcd10Code}
+                        className="w-full border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-700 font-medium py-2 px-3 rounded-md transition flex items-center justify-center gap-2"
+                      >
+                        <Plus className="w-4 h-4" />
+                        Weiteren ICD-10-Code hinzufügen
+                      </button>
+                    )}
+                  </div>
                 </Field>
 
                 <Field label="Therapiefrequenz" icon={<Clock className="w-4 h-4" />}>
@@ -251,13 +369,18 @@ export default function App() {
   )
 }
 
-function Field({ label, icon, children }) {
+function Field({ label, hint, icon, children }) {
   return (
     <label className="block mb-6">
-      <div className="flex items-center gap-2 mb-4 text-sm font-medium text-slate-700">
+      <div className="flex items-center gap-2 mb-1 text-sm font-medium text-slate-700">
         <span className="text-slate-500">{icon}</span>
         {label}
       </div>
+
+      {hint && (
+        <p className="text-xs text-slate-500 mb-3 ml-6">{hint}</p>
+      )}
+
       {children}
     </label>
   )
@@ -316,10 +439,10 @@ function ResultDisplay({ result }) {
           </div>
         )}
 
-        {result.csvMatch && (
+        {result.csvMatches?.length > 0 && (
           <div className="border border-amber-200 bg-amber-50 rounded-lg p-3">
             <p className="text-sm text-amber-900">
-              ICD-10 wurde in der Diagnoseliste für langfristigen Heilmittelbedarf /
+              Mindestens ein ICD-10-Code wurde in der Diagnoseliste für langfristigen Heilmittelbedarf /
               besonderen Verordnungsbedarf gefunden.
             </p>
           </div>

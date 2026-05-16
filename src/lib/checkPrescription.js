@@ -26,7 +26,7 @@ export function checkPrescription(data, csvData = []) {
   const errors = []
   const infos = []
   let latestStartDate = null
-  let csvMatch = null
+  const csvMatches = []
 
   if (!data.issueDate) {
     errors.push('Bitte Ausstellungsdatum eingeben.')
@@ -69,46 +69,79 @@ export function checkPrescription(data, csvData = []) {
       }
     }
 
-    const icd10Normalized = normalizeIcd10(data.icd10)
+    const icd10Codes = getNormalizedIcd10Codes(data)
 
-    if (!icd10Normalized) {
-      errors.push('Bei mehr als 6 Behandlungseinheiten muss ein ICD-10-Code angegeben werden.')
+    if (icd10Codes.length === 0) {
+      errors.push('Bei mehr als 6 Behandlungseinheiten muss mindestens ein ICD-10-Code angegeben werden.')
     } else if (csvData.length > 0) {
-      csvMatch = findIcdInCsv(icd10Normalized, csvData)
+      const checkedCodes = icd10Codes.map(code => {
+        const match = findIcdInCsv(code, csvData)
 
-      if (!csvMatch) {
-        errors.push(
-          `Der ICD-10-Code "${data.icd10}" wurde nicht in der Diagnoseliste für langfristigen Heilmittelbedarf / besonderen Verordnungsbedarf gefunden. Die Verordnung ist bei mehr als 6 Behandlungseinheiten nur mit einem gelisteten ICD-10-Code zulässig.`
-        )
-      } else {
-        const physioGroups = parsePhysioGroups(csvMatch.Physio)
-
-        if (data.diagnosisGroup && physioGroups.length > 0) {
-          const inputGroup = data.diagnosisGroup.trim().toUpperCase()
-          const groupMatches = physioGroups.includes(inputGroup)
-
-          if (!groupMatches) {
-            errors.push(
-              `Diagnosegruppe passt nicht zur ICD-10-Diagnose. Erwartet: ${physioGroups.join(', ')}, eingegeben: ${data.diagnosisGroup}.`
-            )
+        if (!match) {
+          return {
+            code,
+            match: null,
+            physioGroups: [],
+            groupMatches: false,
           }
         }
 
+        const physioGroups = parsePhysioGroups(match.Physio)
+        const inputGroup = data.diagnosisGroup?.trim().toUpperCase()
+        const groupMatches =
+          !inputGroup ||
+          physioGroups.length === 0 ||
+          physioGroups.includes(inputGroup)
+
+        return {
+          code,
+          match,
+          physioGroups,
+          groupMatches,
+        }
+      })
+
+      const validCode = checkedCodes.find(item => item.match && item.groupMatches)
+
+      checkedCodes.forEach(item => {
+        if (!item.match) {
+          infos.push(
+            `ICD-10 "${item.code}" wurde nicht in der Diagnoseliste für langfristigen Heilmittelbedarf / besonderen Verordnungsbedarf gefunden.`
+          )
+          return
+        }
+
+        csvMatches.push(item.match)
+
         infos.push(
-          'ICD-10 wurde in der Diagnoseliste für langfristigen Heilmittelbedarf / besonderen Verordnungsbedarf gefunden.'
+          `ICD-10 "${item.code}" wurde in der Diagnoseliste für langfristigen Heilmittelbedarf / besonderen Verordnungsbedarf gefunden.`
         )
 
-        if (csvMatch.Diagnose?.trim()) {
-          infos.push(`Diagnose: ${csvMatch.Diagnose.trim()}`)
+        if (item.match.Diagnose?.trim()) {
+          infos.push(`Diagnose zu "${item.code}": ${item.match.Diagnose.trim()}`)
         }
 
-        if (csvMatch.Hinweis?.trim()) {
-          infos.push(`Hinweis aus Diagnoseliste: ${csvMatch.Hinweis.trim()}`)
+        if (item.match.Hinweis?.trim()) {
+          infos.push(`Hinweis zu "${item.code}": ${item.match.Hinweis.trim()}`)
         }
 
-        if (physioGroups.length > 0) {
-          infos.push(`Erlaubte Physio-Diagnosegruppen laut Liste: ${physioGroups.join(', ')}`)
+        if (item.physioGroups.length > 0) {
+          infos.push(
+            `Erlaubte Physio-Diagnosegruppen zu "${item.code}" laut Liste: ${item.physioGroups.join(', ')}`
+          )
         }
+
+        if (!item.groupMatches && data.diagnosisGroup) {
+          infos.push(
+            `ICD-10 "${item.code}" wurde gefunden, passt aber nicht zur eingegebenen Diagnosegruppe "${data.diagnosisGroup}".`
+          )
+        }
+      })
+
+      if (!validCode) {
+        errors.push(
+          'Keiner der eingegebenen ICD-10-Codes passt zur ausgewählten Diagnosegruppe. Die Verordnung ist bei mehr als 6 Behandlungseinheiten nur mit einem passenden gelisteten ICD-10-Code zulässig.'
+        )
       }
     }
   }
@@ -123,8 +156,20 @@ export function checkPrescription(data, csvData = []) {
     errors,
     infos,
     latestStartDate,
-    csvMatch,
+    csvMatches,
   }
+}
+
+function getNormalizedIcd10Codes(data) {
+  if (Array.isArray(data.icd10Codes)) {
+    return data.icd10Codes
+      .map(code => normalizeIcd10(code))
+      .filter(Boolean)
+  }
+
+  const legacyCode = normalizeIcd10(data.icd10)
+
+  return legacyCode ? [legacyCode] : []
 }
 
 function normalizeIcd10(icd10) {
