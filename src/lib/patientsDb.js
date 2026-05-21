@@ -1,6 +1,7 @@
 const DB_NAME = 'physio-doc-local';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 const PATIENT_STORE = 'patients';
+const PRESCRIPTION_STORE = 'prescriptions';
 const META_STORE = 'meta';
 const LAST_OPENED_KEY = 'lastOpenedPatientIds';
 const MAX_RECENT = 5;
@@ -17,6 +18,12 @@ function openDb() {
         patientStore.createIndex('lastName', 'lastName', { unique: false });
       }
 
+      if (!db.objectStoreNames.contains(PRESCRIPTION_STORE)) {
+        const prescriptionStore = db.createObjectStore(PRESCRIPTION_STORE, { keyPath: 'id' });
+        prescriptionStore.createIndex('patientId', 'patientId', { unique: false });
+        prescriptionStore.createIndex('issueDate', 'issueDate', { unique: false });
+      }
+
       if (!db.objectStoreNames.contains(META_STORE)) {
         db.createObjectStore(META_STORE, { keyPath: 'key' });
       }
@@ -25,27 +32,6 @@ function openDb() {
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(new Error(request.error?.message || 'Datenbank konnte nicht geöffnet werden.'));
   });
-}
-
-function runTransaction(storeName, mode, executor) {
-  return openDb().then(
-    db =>
-      new Promise((resolve, reject) => {
-        const tx = db.transaction(storeName, mode);
-        const store = tx.objectStore(storeName);
-
-        let result;
-        try {
-          result = executor(store);
-        } catch (error) {
-          reject(error);
-          return;
-        }
-
-        tx.oncomplete = () => resolve(result);
-        tx.onerror = () => reject(new Error(tx.error?.message || 'Datenbank-Transaktion fehlgeschlagen.'));
-      }),
-  );
 }
 
 function getRequestResult(request) {
@@ -61,6 +47,7 @@ export async function getAllPatients() {
     const tx = db.transaction(PATIENT_STORE, 'readonly');
     const store = tx.objectStore(PATIENT_STORE);
     const patients = await getRequestResult(store.getAll());
+
     return patients.sort((a, b) => {
       const byLastName = a.lastName.localeCompare(b.lastName, 'de');
       if (byLastName !== 0) return byLastName;
@@ -92,10 +79,15 @@ export async function savePatient(patientInput) {
   };
 
   try {
-    await runTransaction(PATIENT_STORE, 'readwrite', store => {
-      store.put(patient);
-      return patient;
+    const db = await openDb();
+    const tx = db.transaction(PATIENT_STORE, 'readwrite');
+    tx.objectStore(PATIENT_STORE).put(patient);
+
+    await new Promise((resolve, reject) => {
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(new Error(tx.error?.message || 'Datenbank-Transaktion fehlgeschlagen.'));
     });
+
     return patient;
   } catch (error) {
     throw new Error(`Patient konnte nicht gespeichert werden: ${error.message}`);
@@ -104,7 +96,25 @@ export async function savePatient(patientInput) {
 
 export async function deletePatient(id) {
   try {
-    await runTransaction(PATIENT_STORE, 'readwrite', store => store.delete(id));
+    const db = await openDb();
+    const tx = db.transaction([PATIENT_STORE, PRESCRIPTION_STORE], 'readwrite');
+    tx.objectStore(PATIENT_STORE).delete(id);
+
+    const prescriptionStore = tx.objectStore(PRESCRIPTION_STORE);
+    const index = prescriptionStore.index('patientId');
+    const request = index.openCursor(IDBKeyRange.only(id));
+
+    request.onsuccess = () => {
+      const cursor = request.result;
+      if (!cursor) return;
+      prescriptionStore.delete(cursor.primaryKey);
+      cursor.continue();
+    };
+
+    await new Promise((resolve, reject) => {
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(new Error(tx.error?.message || 'Patient konnte nicht gelöscht werden.'));
+    });
   } catch (error) {
     throw new Error(`Patient konnte nicht gelöscht werden: ${error.message}`);
   }
@@ -147,5 +157,55 @@ export async function getRecentlyOpenedPatients() {
     return patients.filter(Boolean);
   } catch (error) {
     throw new Error(`Zuletzt geöffnete Patienten konnten nicht geladen werden: ${error.message}`);
+  }
+}
+
+export async function getPrescriptionsByPatientId(patientId) {
+  try {
+    const db = await openDb();
+    const tx = db.transaction(PRESCRIPTION_STORE, 'readonly');
+    const store = tx.objectStore(PRESCRIPTION_STORE);
+    const index = store.index('patientId');
+    const prescriptions = await getRequestResult(index.getAll(patientId));
+
+    return prescriptions.sort((a, b) => b.issueDate.localeCompare(a.issueDate));
+  } catch (error) {
+    throw new Error(`Verordnungen konnten nicht geladen werden: ${error.message}`);
+  }
+}
+
+export async function getPrescriptionById(id) {
+  try {
+    const db = await openDb();
+    const tx = db.transaction(PRESCRIPTION_STORE, 'readonly');
+    const store = tx.objectStore(PRESCRIPTION_STORE);
+    return await getRequestResult(store.get(id));
+  } catch (error) {
+    throw new Error(`Verordnung konnte nicht geladen werden: ${error.message}`);
+  }
+}
+
+export async function savePrescription(prescriptionInput) {
+  const now = new Date().toISOString();
+  const prescription = {
+    ...prescriptionInput,
+    id: prescriptionInput.id || crypto.randomUUID(),
+    updatedAt: now,
+    createdAt: prescriptionInput.createdAt || now,
+  };
+
+  try {
+    const db = await openDb();
+    const tx = db.transaction(PRESCRIPTION_STORE, 'readwrite');
+    tx.objectStore(PRESCRIPTION_STORE).put(prescription);
+
+    await new Promise((resolve, reject) => {
+      tx.oncomplete = resolve;
+      tx.onerror = () => reject(new Error(tx.error?.message || 'Datenbank-Transaktion fehlgeschlagen.'));
+    });
+
+    return prescription;
+  } catch (error) {
+    throw new Error(`Verordnung konnte nicht gespeichert werden: ${error.message}`);
   }
 }
