@@ -1,453 +1,221 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { Plus, Search, ArrowLeft, Save } from 'lucide-react'
 import {
-  ClipboardCheck,
-  Calendar,
-  Stethoscope,
-  Pill,
-  Hash,
-  FileText,
-  Clock,
-  CheckCircle2,
-  XCircle,
-  Info,
-  RotateCcw,
-  Loader2,
-  Activity,
-  Plus,
-  Trash2,
-} from 'lucide-react'
-import { checkPrescription, loadCsvData } from './lib/checkPrescription'
+  getAllPatients,
+  getPatientById,
+  getRecentlyOpenedPatients,
+  markPatientAsRecentlyOpened,
+  savePatient,
+} from './lib/patientsDb'
 
-const DIAGNOSIS_GROUPS = ['EX', 'WS', 'CS', 'LY', 'PN', 'AT', 'ZN', 'SO1', 'SO2', 'SO3', 'SO4', 'SO5', 'GE']
+const EMPTY_FORM = { id: '', firstName: '', lastName: '', birthDate: '', createdAt: '' }
 
-const REMEDIES = [
-  'Krankengymnastik',
-  'Manuelle Therapie',
-  'KG-ZNS (Bobath/Vojta/PNF)',
-  'KG-Gerät',
-  'KG-Mukoviszidose',
-  'MLD30',
-  'MLD45',
-  'MLD60',
-  'Klassische Massagetherapie',
-  'Bindegewebsmassage',
-  'Wärmetherapie',
-  'Kältetherapie',
-  'Elektrotherapie',
-  'Ultraschalltherapie',
-  'Traktionsbehandlung',
-]
+function formatBirthDate(value) {
+  if (!value) return '–'
+  return new Date(value).toLocaleDateString('de-DE')
+}
 
-const FREQUENCIES = [
-  '1x wöchentlich',
-  '1-2x wöchentlich',
-  '2x wöchentlich',
-  '2-3x wöchentlich',
-  '3x wöchentlich',
-  '4x wöchentlich',
-]
-
-const LEITSYMPTOMATIK_OPTIONS = [
-  { value: 'a', label: 'a' },
-  { value: 'b', label: 'b' },
-  { value: 'c', label: 'c' },
-  { value: 'x', label: 'x (patientenindividuelle Leitsymptomatik)' },
-]
+function PatientCard({ patient, onOpen }) {
+  return (
+    <button
+      type="button"
+      onClick={() => onOpen(patient.id)}
+      className="w-full text-left rounded-2xl border border-slate-200 bg-white p-4 active:scale-[0.99] transition"
+    >
+      <p className="text-lg font-semibold text-slate-900">{patient.lastName}</p>
+      <p className="text-base text-slate-700">{patient.firstName}</p>
+      <p className="text-sm text-slate-500 mt-1">Geburtsdatum: {formatBirthDate(patient.birthDate)}</p>
+    </button>
+  )
+}
 
 export default function App() {
-  const [formData, setFormData] = useState({
-    issueDate: '',
-    diagnosisGroup: '',
-    leitsymptomatik: [],
-    remedy: '',
-    units: '',
-    icd10Codes: [''],
-    frequency: '',
-  })
+  const [view, setView] = useState('list')
+  const [patients, setPatients] = useState([])
+  const [recentPatients, setRecentPatients] = useState([])
+  const [query, setQuery] = useState('')
+  const [form, setForm] = useState(EMPTY_FORM)
+  const [loading, setLoading] = useState(true)
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
 
-  const [result, setResult] = useState(null)
-  const [csvData, setCsvData] = useState([])
-  const [csvLoading, setCsvLoading] = useState(true)
+  const filteredPatients = useMemo(() => {
+    const normalized = query.trim().toLowerCase()
+    if (!normalized) return patients
+    return patients.filter(patient =>
+      `${patient.lastName} ${patient.firstName}`.toLowerCase().includes(normalized),
+    )
+  }, [patients, query])
 
-  const showExtendedFields = parseInt(formData.units, 10) > 6
+  async function loadData() {
+    setLoading(true)
+    setError('')
+    try {
+      const [all, recents] = await Promise.all([getAllPatients(), getRecentlyOpenedPatients()])
+      setPatients(all)
+      setRecentPatients(recents)
+    } catch (loadError) {
+      setError(loadError.message)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   useEffect(() => {
-    async function loadData() {
-      setCsvLoading(true)
-      const data = await loadCsvData()
-      setCsvData(data)
-      setCsvLoading(false)
-    }
-
     loadData()
   }, [])
 
-  const updateField = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-    if (result) setResult(null)
+  function startCreate() {
+    setForm(EMPTY_FORM)
+    setError('')
+    setView('edit')
   }
 
-  const toggleLeitsymptomatik = value => {
-    setFormData(prev => {
-      const alreadySelected = prev.leitsymptomatik.includes(value)
-
-      return {
-        ...prev,
-        leitsymptomatik: alreadySelected
-          ? prev.leitsymptomatik.filter(item => item !== value)
-          : [...prev.leitsymptomatik, value],
+  async function openEdit(patientId) {
+    setError('')
+    try {
+      const patient = await getPatientById(patientId)
+      if (!patient) {
+        setError('Patient wurde nicht gefunden.')
+        return
       }
-    })
-
-    if (result) setResult(null)
+      setForm(patient)
+      setView('edit')
+      await markPatientAsRecentlyOpened(patientId)
+      const recents = await getRecentlyOpenedPatients()
+      setRecentPatients(recents)
+    } catch (openError) {
+      setError(openError.message)
+    }
   }
 
-  const updateIcd10Code = (index, value) => {
-    setFormData(prev => {
-      const nextCodes = [...prev.icd10Codes]
-      nextCodes[index] = value.toUpperCase()
+  async function handleSave(event) {
+    event.preventDefault()
+    setSaving(true)
+    setError('')
 
-      return {
-        ...prev,
-        icd10Codes: nextCodes,
+    try {
+      if (!form.lastName.trim() || !form.firstName.trim() || !form.birthDate) {
+        throw new Error('Bitte Name, Vorname und Geburtsdatum ausfüllen.')
       }
-    })
 
-    if (result) setResult(null)
-  }
-
-  const addIcd10Code = () => {
-    setFormData(prev => {
-      if (prev.icd10Codes.length >= 2) return prev
-
-      return {
-        ...prev,
-        icd10Codes: [...prev.icd10Codes, ''],
-      }
-    })
-
-    if (result) setResult(null)
-  }
-
-  const removeIcd10Code = index => {
-    setFormData(prev => {
-      if (prev.icd10Codes.length <= 1) return prev
-
-      return {
-        ...prev,
-        icd10Codes: prev.icd10Codes.filter((_, itemIndex) => itemIndex !== index),
-      }
-    })
-
-    if (result) setResult(null)
-  }
-
-  const handleCheck = () => {
-    const checkResult = checkPrescription(formData, csvData)
-    setResult(checkResult)
-
-    setTimeout(() => {
-      document.getElementById('result-section')?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+      const saved = await savePatient({
+        ...form,
+        lastName: form.lastName.trim(),
+        firstName: form.firstName.trim(),
       })
-    }, 100)
-  }
-
-  const handleReset = () => {
-    setFormData({
-      issueDate: '',
-      diagnosisGroup: '',
-      leitsymptomatik: [],
-      remedy: '',
-      units: '',
-      icd10Codes: [''],
-      frequency: '',
-    })
-    setResult(null)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+      await markPatientAsRecentlyOpened(saved.id)
+      await loadData()
+      setView('list')
+    } catch (saveError) {
+      setError(saveError.message)
+    } finally {
+      setSaving(false)
+    }
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 pb-8">
-      <header className="bg-slate-800 text-white px-4 py-3 shadow-sm sticky top-0 z-10">
-        <div className="max-w-2xl mx-auto flex items-center gap-3">
-          <ClipboardCheck className="w-7 h-7 text-sky-300" />
-          <div>
-            <h1 className="text-lg font-semibold leading-tight">Heilmittel-Check</h1>
-            <p className="text-xs text-slate-300">Formale Prüfung Muster 13</p>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-slate-50">
+      <main className="mx-auto w-full max-w-xl p-4 pb-12 space-y-4">
+        <header className="sticky top-0 z-10 -mx-4 px-4 py-3 bg-slate-50/95 backdrop-blur border-b border-slate-200">
+          <h1 className="text-xl font-semibold text-slate-900">Physio Doku (lokal)</h1>
+          <p className="text-sm text-slate-500">Mobile-first Patientenverwaltung ohne Cloud</p>
+        </header>
 
-      <main className="max-w-2xl mx-auto px-3 py-4 space-y-4">
-        <div className="bg-white border border-slate-200 rounded-lg p-3 text-sm text-slate-700">
-          <div className="flex gap-2">
-            <Info className="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" />
-            <p>
-              Werkzeug zur formalen Plausibilitätsprüfung. Keine medizinische oder rechtliche Beratung.
-            </p>
-          </div>
-        </div>
+        {error && <p className="rounded-xl border border-red-200 bg-red-50 p-3 text-red-700 text-sm">{error}</p>}
 
-        {csvLoading && (
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 flex items-center gap-2">
-            <Loader2 className="w-4 h-4 text-amber-600 animate-spin" />
-            <p className="text-sm text-amber-800">Diagnoseliste wird geladen...</p>
-          </div>
-        )}
-
-        <section className="bg-white border border-slate-300 rounded-lg shadow-sm overflow-hidden">
-          <div className="bg-slate-200 border-b border-slate-300 px-4 py-2">
-            <h2 className="font-semibold text-slate-800">Verordnung prüfen</h2>
-          </div>
-
-          <div className="p-4 flex flex-col gap-6">
-            <Field label="Ausstellungsdatum" icon={<Calendar className="w-4 h-4" />}>
-              <input
-                type="date"
-                value={formData.issueDate}
-                onChange={e => updateField('issueDate', e.target.value)}
-                className="input"
-              />
-            </Field>
-
-            <Field label="Diagnosegruppe" icon={<Stethoscope className="w-4 h-4" />}>
-              <select
-                value={formData.diagnosisGroup}
-                onChange={e => updateField('diagnosisGroup', e.target.value)}
-                className="input"
-              >
-                <option value="">Bitte auswählen...</option>
-                {DIAGNOSIS_GROUPS.map(group => (
-                  <option key={group} value={group}>{group}</option>
-                ))}
-              </select>
-            </Field>
-
-            <Field
-              label="Leitsymptomatik"
-              hint="Mehrfachauswahl möglich"
-              icon={<Activity className="w-4 h-4" />}
-            >
-              <div className="space-y-2">
-                {LEITSYMPTOMATIK_OPTIONS.map(option => (
-                  <label
-                    key={option.value}
-                    className="flex items-center gap-3 border border-slate-200 rounded-md px-3 py-2 bg-white"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={formData.leitsymptomatik.includes(option.value)}
-                      onChange={() => toggleLeitsymptomatik(option.value)}
-                      className="w-5 h-5"
-                    />
-                    <span className="text-sm text-slate-800">{option.label}</span>
-                  </label>
-                ))}
-              </div>
-            </Field>
-
-            <Field label="Heilmittel" icon={<Pill className="w-4 h-4" />}>
-              <select
-                value={formData.remedy}
-                onChange={e => updateField('remedy', e.target.value)}
-                className="input"
-              >
-                <option value="">Bitte auswählen...</option>
-                {REMEDIES.map(remedy => (
-                  <option key={remedy} value={remedy}>{remedy}</option>
-                ))}
-              </select>
-            </Field>
-
-            <Field label="Behandlungseinheiten" icon={<Hash className="w-4 h-4" />}>
-              <input
-                type="number"
-                inputMode="numeric"
-                min="1"
-                max="99"
-                value={formData.units}
-                onChange={e => updateField('units', e.target.value)}
-                placeholder="z. B. 6"
-                className="input"
-              />
-            </Field>
-
-            {showExtendedFields && (
-              <div className="border-t border-slate-200 pt-6 flex flex-col gap-6">
-                <div className="bg-sky-50 border border-sky-200 rounded-lg p-3 text-sm text-sky-800">
-                  Bei mehr als 6 Behandlungseinheiten sind ICD-10 und Therapiefrequenz erforderlich.
-                </div>
-
-                <Field label="ICD-10 Code" icon={<FileText className="w-4 h-4" />}>
-                  <div className="space-y-3">
-                    {formData.icd10Codes.map((code, index) => (
-                      <div key={index} className="flex gap-2">
-                        <input
-                          type="text"
-                          value={code}
-                          onChange={e => updateIcd10Code(index, e.target.value)}
-                          placeholder={index === 0 ? 'z. B. M17.1' : 'weiterer ICD-10-Code'}
-                          className="input uppercase flex-1"
-                        />
-
-                        {formData.icd10Codes.length > 1 && (
-                          <button
-                            type="button"
-                            onClick={() => removeIcd10Code(index)}
-                            className="bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-md px-3"
-                            title="ICD-10-Code entfernen"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        )}
-                      </div>
-                    ))}
-
-                    {formData.icd10Codes.length < 2 && (
-                      <button
-                        type="button"
-                        onClick={addIcd10Code}
-                        className="w-full border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-700 font-medium py-2 px-3 rounded-md transition flex items-center justify-center gap-2"
-                      >
-                        <Plus className="w-4 h-4" />
-                        Weiteren ICD-10-Code hinzufügen
-                      </button>
-                    )}
-                  </div>
-                </Field>
-
-                <Field label="Therapiefrequenz" icon={<Clock className="w-4 h-4" />}>
-                  <select
-                    value={formData.frequency}
-                    onChange={e => updateField('frequency', e.target.value)}
-                    className="input"
-                  >
-                    <option value="">Bitte auswählen...</option>
-                    {FREQUENCIES.map(freq => (
-                      <option key={freq} value={freq}>{freq}</option>
-                    ))}
-                  </select>
-                </Field>
-              </div>
-            )}
-
-            <div className="flex gap-4 pt-8">
+        {view === 'list' ? (
+          <section className="space-y-4">
+            <div className="flex gap-2">
+              <label className="relative flex-1">
+                <Search className="absolute left-3 top-3.5 h-5 w-5 text-slate-400" />
+                <input
+                  className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-10 pr-3 text-base"
+                  type="search"
+                  placeholder="Patient suchen"
+                  value={query}
+                  onChange={event => setQuery(event.target.value)}
+                />
+              </label>
               <button
-                onClick={handleCheck}
-                className="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-semibold py-3 px-4 rounded-md transition flex items-center justify-center gap-2"
+                type="button"
+                onClick={startCreate}
+                className="inline-flex items-center gap-1 rounded-xl bg-sky-600 px-4 py-3 text-white text-base font-medium"
               >
-                <ClipboardCheck className="w-5 h-5" />
-                Prüfen
-              </button>
-
-              <button
-                onClick={handleReset}
-                className="bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-4 rounded-md transition flex items-center justify-center"
-                title="Zurücksetzen"
-              >
-                <RotateCcw className="w-5 h-5" />
+                <Plus className="h-5 w-5" /> Patient
               </button>
             </div>
-          </div>
-        </section>
 
-        {result && (
-          <div id="result-section">
-            <ResultDisplay result={result} />
-          </div>
+            <div className="space-y-2">
+              <h2 className="text-sm font-medium text-slate-500">Zuletzt geöffnet</h2>
+              {recentPatients.length === 0 ? (
+                <p className="text-sm text-slate-400">Noch keine zuletzt geöffneten Patienten.</p>
+              ) : (
+                <div className="grid gap-2">{recentPatients.map(patient => <PatientCard key={patient.id} patient={patient} onOpen={openEdit} />)}</div>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <h2 className="text-sm font-medium text-slate-500">Patienten</h2>
+              {loading ? (
+                <p className="text-sm text-slate-400">Lade Patienten...</p>
+              ) : filteredPatients.length === 0 ? (
+                <p className="text-sm text-slate-400">Keine Patienten gefunden.</p>
+              ) : (
+                <div className="grid gap-2">{filteredPatients.map(patient => <PatientCard key={patient.id} patient={patient} onOpen={openEdit} />)}</div>
+              )}
+            </div>
+          </section>
+        ) : (
+          <section className="rounded-2xl border border-slate-200 bg-white p-4">
+            <form className="space-y-4" onSubmit={handleSave}>
+              <button
+                type="button"
+                onClick={() => setView('list')}
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-3 text-base"
+              >
+                <ArrowLeft className="h-5 w-5" /> Zurück zur Liste
+              </button>
+
+              <div>
+                <label className="block text-sm text-slate-600 mb-1">Name</label>
+                <input
+                  className="w-full rounded-xl border border-slate-200 px-3 py-3 text-base"
+                  value={form.lastName}
+                  onChange={event => setForm(prev => ({ ...prev, lastName: event.target.value }))}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-slate-600 mb-1">Vorname</label>
+                <input
+                  className="w-full rounded-xl border border-slate-200 px-3 py-3 text-base"
+                  value={form.firstName}
+                  onChange={event => setForm(prev => ({ ...prev, firstName: event.target.value }))}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm text-slate-600 mb-1">Geburtsdatum</label>
+                <input
+                  type="date"
+                  className="w-full rounded-xl border border-slate-200 px-3 py-3 text-base"
+                  value={form.birthDate}
+                  onChange={event => setForm(prev => ({ ...prev, birthDate: event.target.value }))}
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={saving}
+                className="w-full inline-flex justify-center items-center gap-2 rounded-xl bg-emerald-600 px-4 py-4 text-white text-base font-semibold disabled:opacity-70"
+              >
+                <Save className="h-5 w-5" /> {saving ? 'Speichern...' : 'Speichern'}
+              </button>
+            </form>
+          </section>
         )}
       </main>
-
-      <footer className="max-w-2xl mx-auto px-4 pt-4 pb-6">
-        <p className="text-center text-xs text-slate-500">
-          Datenstand Diagnoseliste / Prüfregeln: 2024
-        </p>
-      </footer>
     </div>
-  )
-}
-
-function Field({ label, hint, icon, children }) {
-  return (
-    <label className="block mb-6">
-      <div className="flex items-center gap-2 mb-1 text-sm font-medium text-slate-700">
-        <span className="text-slate-500">{icon}</span>
-        {label}
-      </div>
-
-      {hint && (
-        <p className="text-xs text-slate-500 mb-3 ml-6">{hint}</p>
-      )}
-
-      {children}
-    </label>
-  )
-}
-
-function ResultDisplay({ result }) {
-  const isSuccess = result.status === 'success'
-
-  return (
-    <section className="bg-white border border-slate-300 rounded-lg shadow-sm overflow-hidden">
-      <div className={isSuccess ? 'bg-emerald-600 text-white px-4 py-3' : 'bg-red-600 text-white px-4 py-3'}>
-        <div className="flex items-center gap-2">
-          {isSuccess ? (
-            <CheckCircle2 className="w-6 h-6" />
-          ) : (
-            <XCircle className="w-6 h-6" />
-          )}
-          <h2 className="font-semibold text-lg">{result.title}</h2>
-        </div>
-      </div>
-
-      <div className="p-4 space-y-6">
-        {isSuccess && result.latestStartDate && (
-          <div className="border border-emerald-200 bg-emerald-50 rounded-lg p-3">
-            <p className="text-sm text-emerald-900">
-              Therapiebeginn spätestens am{' '}
-              <strong>{result.latestStartDate}</strong>.
-            </p>
-          </div>
-        )}
-
-        {!isSuccess && result.errors.length > 0 && (
-          <div className="space-y-2">
-            {result.errors.map((error, index) => (
-              <div key={index} className="border border-red-200 bg-red-50 rounded-lg p-3 flex gap-2">
-                <XCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-red-950">{error}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {result.infos.length > 0 && (
-          <div className="border border-slate-200 bg-slate-50 rounded-lg overflow-hidden">
-            <div className="bg-slate-200 px-3 py-2 flex items-center gap-2">
-              <Info className="w-4 h-4 text-slate-600" />
-              <h3 className="text-sm font-semibold text-slate-800">Hinweise</h3>
-            </div>
-            <div className="p-3 space-y-2">
-              {result.infos.map((info, index) => (
-                <p key={index} className="text-sm text-slate-700">
-                  • {info}
-                </p>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {result.csvMatches?.length > 0 && (
-          <div className="border border-amber-200 bg-amber-50 rounded-lg p-3">
-            <p className="text-sm text-amber-900">
-              Mindestens ein ICD-10-Code wurde in der Diagnoseliste für langfristigen Heilmittelbedarf /
-              besonderen Verordnungsbedarf gefunden.
-            </p>
-          </div>
-        )}
-      </div>
-    </section>
   )
 }
